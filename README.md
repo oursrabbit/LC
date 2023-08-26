@@ -17,31 +17,31 @@
 
 *增加四种新的资源*
 
-* Model：模型资源。DB模型类：ModelInfo，JSON类：ModelInfoJSON *
+*Model：模型资源。DB模型类：ModelInfo，JSON类：ModelInfoJSON*
 
-* AE：AE资源。DB模型类：AEInfo，JSON类：AEInfoJSON *
+*AE：AE资源。DB模型类：AEInfo，JSON类：AEInfoJSON*
 
-* IMG：图片资源。DB模型类：IMGInfo，JSON类：IMGInfoJSON *
+*IMG：图片资源。DB模型类：IMGInfo，JSON类：IMGInfoJSON*
 
-* DOC：文档资源。DB模型类：DOCInfo，JSON类：DOCInfoJSON *
+*DOC：文档资源。DB模型类：DOCInfo，JSON类：DOCInfoJSON*
 
-** ---Update--- **
+**---Update---**
 
 1. 修复了一些之前没有验证Header的问题
 
 ## v2 1.0.2
 
-* 根据是否传输数据至服务器，只保留了GET POST *
+*根据是否传输数据至服务器，只保留了GET POST*
 
-* 返回的StatusCode不为200时，使用RestResultJSON描述错误信息 *
+*返回的StatusCode不为200时，使用RestResultJSON描述错误信息*
 
-* 第一次接口对接问题.txt *
+*第一次接口对接问题.txt*
 
-* 直接导出Excel，对列的编辑在Excel中进行~~~ *
+*直接导出Excel，对列的编辑在Excel中进行~~~*
 
-* 云存储收费问题，视频文件上传目前都是云后台直接操作，不需要接口 *
+*云存储收费问题，视频文件上传目前都是云后台直接操作，不需要接口*
 
-** ---Update--- **
+**---Update---**
 
 1. 重命名了Schema，为XXXXXJSON
 
@@ -59,8 +59,8 @@
 
 ## v1 1.0.1
 
-* UserInfo、MediaInfo、ObjectId为后端使用的MongoDB Model *
+*UserInfo、MediaInfo、ObjectId为后端使用的MongoDB Model*
 
-* UserInfoJSON、MediaInfoJSON、FullTextSearch、Search为前后端通讯用的JSON结构 *
+*UserInfoJSON、MediaInfoJSON、FullTextSearch、Search为前后端通讯用的JSON结构*
 
-* UserInfo为用户信息，MediaInfo为视频资源信息 *
+*UserInfo为用户信息，MediaInfo为视频资源信息*
