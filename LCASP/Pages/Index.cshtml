@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+
+<div class="container">
+    <div class="row mb-5" style="margin-top: 40px">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2 style="color: var(--bs-blue);">影像资源检索平台</h2>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6 col-xl-4">
+            <div class="card-body d-flex flex-column align-items-center">
+                <div class="mb-3"><input class="form-control" type="text" id="username" placeholder="用户名"></div>
+                <div class="mb-3"><input class="form-control" type="password" id="password" placeholder="密码"></div>
+                <div class="mb-3"><button class="btn btn-primary d-block w-100" type="button" onclick="index_loginbutton_click()">登录</button></div>
+                <div class="mb-3" id="loginerror"><p>正在加载数据....请勿操作...</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<video id="my-video"
+       class="video-js"
+       controls
+       preload="auto"
+       width="500"
+       height="500">
+
+    <source src="http://114.115.220.129:5500/123.mp4" type="video/mp4">
+    <track kind="subtitles" src="http://114.115.220.129:5500/123-utf.vtt" srclang="en-US" label="中英（utf）" default>
+    <track kind="subtitles" src="http://114.115.220.129:5500/123-asc.vtt" srclang="en-US" label="中英（asc）" default>
+    <track kind="subtitles" src="http://114.115.220.129:5500/123.vtt" srclang="en-US" label="日本语（其它编码）" default>
+</video>
+*@
+
+@section Scripts{
+    <script src="~/js/index.js"></script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+}

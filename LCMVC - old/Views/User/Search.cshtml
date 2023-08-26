@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model UserSearchViewModel
+@{
+}
+
+<div class="container">
+    @*    <form method="post" asp-controller="User" asp-action="Search" onsubmit="oncustompost()">*@
+    <div class="row" style="padding-top: 20px">
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="video_check" name="mediatype" value="video" checked><label class="form-check-label" for="">视频素材</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="ae_check" name="mediatype" value="ae"><label class="form-check-label" for="">AE模板</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="image_check" name="mediatype" value="picture"><label class="form-check-label" for="">图片素材</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="document_check" name="mediatype" value="document"><label class="form-check-label" for="">文档</label></div>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px">
+        <div class="col-2">
+            <input type="text" placeholder="标题" class="form-control" id="titleinput" name="title">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control input-datepicker" placeholder="发布时间" name="publishdate" id="publishdate">
+        </div>
+        <div class="col-3">
+            <div class="treeselect-area"></div>
+            <input type="hidden" class="form-control treeselect-area-hidden" name="areaselected" placeholder="领域" id="areaselected" />
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="关键词（多个关键词使用空格间隔）" name="keywords" id="keywords">
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary" type="button" onclick="getmediainfo()">检索</button>
+        </div>
+    </div>
+    @*    </form>*@
+    <div class="row" style="padding-top: 20px">
+        <div class="col">
+            <label class="form-label fw-light" style="font-size: 14px;">
+                显示顺序：
+                <select class="form-select-sm" id="orderselect" onchange="showMediaListByOrder()">
+                    <option value="发布时间" selected>发布时间</option>
+                    <option value="评分">评分</option>
+                    <option value="热度">热度</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row loading">
+        <h1 class="temph1">加载中...</h1>
+    </div>
+    <div class="row tablelist">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table" style="table-layout: fixed; width: 100%;" id="medialisttable">
+                    <thead>
+                        <tr>
+                            <th style="width: 14.2%;">原标题</th>
+                            <th style="width: 14.2%;">中文题名</th>
+                            <th style="width: 14.2%;">关键词</th>
+                            <th style="width: 14.2%;">画面信息</th>
+                            <th style="width: 14.2%;">时长</th>
+                            <th style="width: 14.2%;">预览</th>
+                            <th style="width: 14.2%;">评分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/signalrinit.js"></script>
+    <script src="~/js/areatree.js"></script>
+    <script src="~/js/monthpicker.js"></script>
+    <script src="~/js/searchpage.js"></script>
+}

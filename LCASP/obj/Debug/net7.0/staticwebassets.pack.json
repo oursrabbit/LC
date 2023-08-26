@@ -1,0 +1,2693 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\LCASP.bundle.scp.css",
+      "PackagePath": "staticwebassets\\LCASP.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\adminIndex.js",
+      "PackagePath": "staticwebassets\\js\\adminIndex.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\areaTree.js",
+      "PackagePath": "staticwebassets\\js\\areaTree.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\keywordTree.js",
+      "PackagePath": "staticwebassets\\js\\keywordTree.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\languageTree.js",
+      "PackagePath": "staticwebassets\\js\\languageTree.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\monthpicker.js",
+      "PackagePath": "staticwebassets\\js\\monthpicker.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\.npmignore",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\.npmignore"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\HELP-US-OUT.txt",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\HELP-US-OUT.txt"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\README.md",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\css\\font-awesome.css.map",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.css.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\animated.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\animated.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\bordered-pulled.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\bordered-pulled.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\core.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\core.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\fixed-width.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\fixed-width.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\font-awesome.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\font-awesome.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\icons.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\icons.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\larger.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\larger.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\list.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\list.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\mixins.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\mixins.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\path.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\path.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\rotated-flipped.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\rotated-flipped.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\screen-reader.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\screen-reader.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\stacked.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\stacked.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\less\\variables.less",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\less\\variables.less"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\package.json",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_animated.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_animated.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_bordered-pulled.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_bordered-pulled.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_core.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_core.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_fixed-width.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_fixed-width.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_icons.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_icons.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_larger.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_larger.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_list.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_list.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_path.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_path.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_rotated-flipped.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_rotated-flipped.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_screen-reader.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_screen-reader.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_stacked.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_stacked.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\font-awesome\\scss\\font-awesome.scss",
+      "PackagePath": "staticwebassets\\lib\\font-awesome\\scss\\font-awesome.scss"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\moment\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\moment"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\README.md",
+      "PackagePath": "staticwebassets\\lib\\moment\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\af.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\az.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bn-bd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bn-bd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\cv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\cv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\cy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\da.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\de-at.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\de.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\dv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\dv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\el.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-ie.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-il.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-il.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\en-sg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\en-sg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\eo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\es-do.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\es-mx.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\es.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\et.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fil.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fil.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\fy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\fy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ga.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ga.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\gd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\gd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\gom-deva.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\gom-deva.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\gom-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\gom-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\gu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\gu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\he.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\hy-am.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\hy-am.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\id.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\is.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\it-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\it-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\it.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\jv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\jv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\km.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\kn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\kn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ku.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ky.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ky.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\lo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\lo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\me.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\me.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\mi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\mi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ml.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ml.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\mn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\mr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\mr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ms-my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\mt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\mt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ne.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ne.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\nl-be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\oc-lnc.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\oc-lnc.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\pa-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\pa-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\se.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\se.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\si.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ss.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ss.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\sw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\sw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ta.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ta.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\te.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\te.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tet.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tet.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\th.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tl-ph.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tl-ph.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tlh.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tlh.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tzl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tzl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tzm-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tzm-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\tzm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\tzm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ug-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ug-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\ur.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\ur.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\uz-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\uz-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\uz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\uz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\x-pseudo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\x-pseudo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\yo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\yo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\zh-mo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\zh-mo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\dist\\moment.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\dist\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\ender.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\ender.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\af.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\az.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bn-bd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bn-bd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\cv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\cv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\cy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\da.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\de-at.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\de.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\dv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\dv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\el.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-ie.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-il.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-il.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\en-sg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\en-sg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\eo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\es-do.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\es-mx.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\es.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\et.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fil.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fil.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\fy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\fy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ga.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ga.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\gd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\gd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\gom-deva.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\gom-deva.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\gom-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\gom-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\gu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\gu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\he.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\hy-am.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\hy-am.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\id.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\is.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\it-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\it-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\it.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\jv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\jv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\km.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\kn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\kn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ku.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ky.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ky.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\lo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\lo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\me.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\me.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\mi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\mi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ml.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ml.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\mn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\mr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\mr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ms-my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\mt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\mt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ne.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ne.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\nl-be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\oc-lnc.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\oc-lnc.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\pa-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\pa-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\se.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\se.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\si.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ss.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ss.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\sw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\sw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ta.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ta.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\te.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\te.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tet.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tet.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\th.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tl-ph.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tl-ph.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tlh.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tlh.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tzl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tzl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tzm-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tzm-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\tzm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\tzm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ug-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ug-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\ur.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\ur.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\uz-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\uz-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\uz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\uz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\x-pseudo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\x-pseudo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\yo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\yo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\zh-mo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\zh-mo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\locales.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\locales.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\locales.min.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\locales.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\locales.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\locales.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\moment-with-locales.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\moment-with-locales.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\moment-with-locales.min.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\moment-with-locales.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\moment-with-locales.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\moment-with-locales.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\moment.min.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\min\\moment.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\moment\\min\\moment.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\moment.d.ts",
+      "PackagePath": "staticwebassets\\lib\\moment\\moment.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\moment.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\package.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\package.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\package.json",
+      "PackagePath": "staticwebassets\\lib\\moment\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\check-overflow.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\check-overflow.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\date-from-array.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\date-from-array.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-anything.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-anything.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-array.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-array.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-object.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-object.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-string-and-array.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-string-and-array.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-string-and-format.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-string-and-format.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\from-string.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\from-string.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\local.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\local.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\parsing-flags.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\parsing-flags.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\utc.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\utc.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\create\\valid.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\create\\valid.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\abs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\abs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\add-subtract.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\add-subtract.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\as.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\as.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\bubble.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\bubble.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\clone.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\clone.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\constructor.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\constructor.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\create.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\create.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\duration.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\duration.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\get.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\get.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\humanize.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\humanize.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\iso-string.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\iso-string.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\prototype.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\prototype.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\duration\\valid.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\duration\\valid.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\format\\format.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\format\\format.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\base-config.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\base-config.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\calendar.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\calendar.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\constructor.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\constructor.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\en.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\formats.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\formats.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\invalid.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\invalid.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\lists.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\lists.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\locale.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\locale.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\locales.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\locales.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\ordinal.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\ordinal.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\pre-post-format.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\pre-post-format.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\prototype.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\prototype.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\relative.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\relative.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\locale\\set.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\locale\\set.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\add-subtract.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\add-subtract.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\calendar.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\calendar.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\clone.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\clone.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\compare.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\compare.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\constructor.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\constructor.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\creation-data.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\creation-data.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\diff.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\diff.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\format.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\format.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\from.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\from.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\get-set.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\get-set.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\locale.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\locale.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\min-max.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\min-max.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\moment.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\now.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\now.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\prototype.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\prototype.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\start-end-of.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\start-end-of.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\to-type.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\to-type.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\to.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\to.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\moment\\valid.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\moment\\valid.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\parse\\regex.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\parse\\regex.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\parse\\token.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\parse\\token.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\aliases.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\aliases.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\constants.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\constants.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\day-of-month.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\day-of-month.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\day-of-week.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\day-of-week.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\day-of-year.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\day-of-year.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\era.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\era.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\hour.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\hour.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\millisecond.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\millisecond.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\minute.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\minute.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\month.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\month.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\offset.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\offset.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\priorities.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\priorities.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\quarter.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\quarter.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\second.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\second.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\timestamp.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\timestamp.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\timezone.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\timezone.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\units.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\units.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\week-calendar-utils.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\week-calendar-utils.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\week-year.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\week-year.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\week.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\week.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\units\\year.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\units\\year.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\abs-ceil.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\abs-ceil.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\abs-floor.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\abs-floor.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\abs-round.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\abs-round.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\compare-arrays.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\compare-arrays.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\defaults.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\defaults.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\deprecate.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\deprecate.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\extend.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\extend.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\has-own-prop.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\has-own-prop.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\hooks.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\hooks.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\index-of.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\index-of.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-array.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-array.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-calendar-spec.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-calendar-spec.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-date.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-date.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-function.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-function.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-leap-year.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-leap-year.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-moment-input.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-moment-input.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-number.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-number.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-object-empty.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-object-empty.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-object.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-object.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-string.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-string.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\is-undefined.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\is-undefined.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\keys.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\keys.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\map.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\map.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\mod.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\mod.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\some.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\some.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\to-int.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\to-int.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\lib\\utils\\zero-fill.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\lib\\utils\\zero-fill.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\af.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-dz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-dz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-kw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-kw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-ly.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-ly.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-ma.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-ma.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-sa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-sa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar-tn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar-tn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ar.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\az.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bn-bd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bn-bd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\bs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\cs.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\cv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\cv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\cy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\da.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\de-at.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\de-at.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\de-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\de.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\dv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\dv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\el.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-au.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-gb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-ie.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-ie.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-il.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-il.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-nz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-nz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\en-sg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\en-sg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\eo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\es-do.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\es-do.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\es-mx.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\es-us.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\es-us.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\es.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\et.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\eu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fa.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fil.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fil.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fr-ca.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fr-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fr-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\fy.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\fy.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ga.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ga.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\gd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\gd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\gl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\gom-deva.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\gom-deva.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\gom-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\gom-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\gu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\gu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\he.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\hi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\hr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\hu.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\hy-am.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\hy-am.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\id.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\is.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\it-ch.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\it-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\it.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ja.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\jv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\jv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ka.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\kk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\kk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\km.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\kn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\kn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ko.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ku.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ky.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ky.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\lb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\lb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\lo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\lo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\lt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\lv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\me.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\me.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\mi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\mi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\mk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ml.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ml.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\mn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\mr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\mr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ms-my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ms-my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ms.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\mt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\mt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\my.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\my.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\nb.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ne.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ne.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\nl-be.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\nl-be.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\nl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\nn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\nn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\oc-lnc.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\oc-lnc.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\pa-in.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\pa-in.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\pl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\pt-br.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\pt.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ro.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ru.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sd.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sd.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\se.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\se.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\si.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sq.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sr-cyrl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sr-cyrl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ss.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ss.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sv.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\sw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\sw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ta.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ta.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\te.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\te.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tet.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tet.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tg.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tg.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\th.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tl-ph.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tl-ph.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tlh.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tlh.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tr.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tzl.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tzl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tzm-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tzm-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\tzm.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\tzm.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ug-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ug-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\uk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\ur.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\ur.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\uz-latn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\uz-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\uz.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\uz.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\vi.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\x-pseudo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\x-pseudo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\yo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\yo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\zh-cn.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\zh-hk.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\zh-hk.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\zh-mo.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\zh-mo.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\locale\\zh-tw.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\locale\\zh-tw.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\src\\moment.js",
+      "PackagePath": "staticwebassets\\lib\\moment\\src\\moment.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\moment\\ts3.1-typings\\moment.d.ts",
+      "PackagePath": "staticwebassets\\lib\\moment\\ts3.1-typings\\moment.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\xlsx"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\README.md",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\bin\\xlsx.njs",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\bin\\xlsx.njs"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\bower.json",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\bower.json"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\cpexcel.full.mjs",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\cpexcel.full.mjs"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\cpexcel.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\cpexcel.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\shim.min.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\shim.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.core.min.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.core.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.core.min.map",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.core.min.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.extendscript.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.extendscript.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.full.min.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.full.min.map",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.full.min.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.mini.min.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.mini.min.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.mini.min.map",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.mini.min.map"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.zahl.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.zahl.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\dist\\xlsx.zahl.mjs",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\dist\\xlsx.zahl.mjs"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\formats.png",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\formats.png"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\legend.png",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\legend.png"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\package.json",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\package.json"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\types\\index.d.ts",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\types\\index.d.ts"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\types\\tsconfig.json",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\types\\tsconfig.json"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\xlsx.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\xlsx.js"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\xlsx.mjs",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\xlsx.mjs"
+    },
+    {
+      "Id": "C:\\Users\\PXQ\\Desktop\\LC\\LCASP\\wwwroot\\lib\\xlsx\\xlsxworker.js",
+      "PackagePath": "staticwebassets\\lib\\xlsx\\xlsxworker.js"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.LCASP.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.LCASP.props",
+      "PackagePath": "build\\LCASP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.LCASP.props",
+      "PackagePath": "buildMultiTargeting\\LCASP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.LCASP.props",
+      "PackagePath": "buildTransitive\\LCASP.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

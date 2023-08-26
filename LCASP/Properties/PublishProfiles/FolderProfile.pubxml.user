@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\PXQ\Desktop\LC\LCASP\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-07-28T06:52:38.3587056Z;True|2023-07-24T16:50:52.4291552+08:00;True|2023-07-24T16:47:08.5938842+08:00;True|2023-07-24T16:44:07.0661651+08:00;True|2023-07-24T16:38:09.8727468+08:00;True|2023-07-24T16:22:52.7298223+08:00;True|2023-07-24T14:45:40.7799488+08:00;True|2023-07-24T14:12:50.6869114+08:00;True|2023-07-20T20:54:21.8838577+08:00;True|2023-07-20T20:44:01.8775643+08:00;True|2023-07-20T20:43:43.8770991+08:00;True|2023-07-20T15:49:54.6835393+08:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

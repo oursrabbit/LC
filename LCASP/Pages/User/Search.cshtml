@@ -1,0 +1,172 @@
+﻿@page
+@model LCASP.Pages.User.SearchModel
+@{
+}
+
+<div class="container">
+    <div class="row" style="padding-top: 20px">
+        <label class="form-label fw-light" style="font-size: 14px;" id="admin_index_label_username">
+            视频对应方式为 id.mp4，如果服务器未找到使用使用默认视频 example.mp4(514KB)，由于带宽（1Mbps）太小，所以播放和下载速度其慢，不是没反应
+        </label>
+    </div>
+    <div class="row" style="padding-top: 20px" id="normalsearch">
+        <div class="col-9">
+            <input type="text" style="width:100%" placeholder="搜索...关键字用' '空格分开，查询为AND且关系，在描述、文件名、领域、关键字中查找" id="search_normalsearch" name="title">
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary" type="button" onclick="search_normalsearchbutton_click()">检索</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-secondary" type="button" onclick="search_showmoresearchbutton_click()" value="show" id="showmoresearchbutton">更多选项</button>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px" id="moresearch">
+        <div class="row" style="padding-top: 20px">
+            <div class="col-2">
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="video_check" name="mediatype" value="video" checked><label class="form-check-label" for="">视频素材</label></div>
+            </div>
+            <div class="col-10">
+                <input type="text" placeholder="资源发布时间...格式：1998.07.01-2022.12.23" class="form-control" id="search_publicdate" name="title">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 20px">
+            <div class="col-4" id="search_area" value="">
+            </div>
+            <div class="col-4" id="search_langage" value="">
+            </div>
+            <div class="col-4" id="search_keyword" value="">
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-6">
+                    <input type="text" placeholder="资源描述信息..." class="form-control" id="search_description" name="title">
+                </div>
+                <div class="col-6">
+                    <input type="text" placeholder="文件名..." class="form-control" id="search_filename" name="title">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col-1">
+                    <button class="btn btn-primary" type="button" onclick="search_moresearchbutton_click()">检索</button>
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-secondary" type="button" onclick="search_shownormalsearchbutton_click()" value="show">普通检索</button>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px">
+                <div class="col">
+                    <label class="form-label fw-light" style="font-size: 14px;">
+                        显示顺序：
+                        <select class="form-select-sm" id="search_showorder">
+                            <option value="最近上传" selected>最近上传</option>
+                            <option value="最早上传">最早上传</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-label fw-light" style="font-size: 14px;">
+                        备注说明：所有查询如果出现多个关键字，关键字之间全部为且关系，如语种：“中文 英文”表示语种同时为中、英文
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="loading">
+        <div class="col-1">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+        <div class="col-11">
+            <label id="loading_text">加载中...</label>
+        </div>
+    </div>
+
+    <div class="row" style="padding-top: 20px">
+    </div>
+    <div class="row" id="tablelist">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table" style="table-layout: fixed; width: 100%;" id="medialisttable">
+                    <thead>
+                        <tr>
+                            <th style="width: 10%;">文件名（中文）</th>
+                            <th style="width: 10%;">关键词</th>
+                            <th style="width: 50%;">画面描述</th>
+                            <th style="width: 20%;">预览</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="search_mediaInfoDetailModel" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row" id="search_detail">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_Id" style="margin-right: 8px;">资源唯一编号：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_type" style="margin-right: 8px;">资源类型：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_lang" style="margin-right: 8px;">语种：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_keyword" style="margin-right: 8px;">关键字：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_tag" style="margin-right: 8px;">标签（领域）：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_publish_date" style="margin-right: 8px;">资源产生时间：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_description" style="margin-right: 8px;">资源描述：</label></div>
+                    </div>
+                                        <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_source_uri" style="margin-right: 8px;">资源来源：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_file_name" style="margin-right: 8px;">原始文件名：</label></div>
+                    </div>
+                                        <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_file_name_zh" style="margin-right: 8px;">中文文件名：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_file_extension" style="margin-right: 8px;">资源文件后缀：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_file_size" style="margin-right: 8px;">文件大小：</label></div>
+                    </div>
+                                        <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_upload_date" style="margin-right: 8px;">资源上传时间：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_resource_upload_user" style="margin-right: 8px;">资源上传人：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_video_clarity" style="margin-right: 8px;">视频清晰度：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="search_detail_video_duration" style="margin-right: 8px;">视频时长：</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="search_close_resource_detail()">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/languageTree.js"></script>
+    <script src="~/js/keywordTree.js"></script>
+    <script src="~/js/areaTree.js"></script>
+    <script src="~/js/search.js"></script>
+}

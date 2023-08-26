@@ -1,0 +1,8 @@
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\LCASP.exe
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\appsettings.json
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\libman.json
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\LCASP.dll
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\LCASP.deps.json
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\LCASP.runtimeconfig.json
+C:\Users\PXQ\Desktop\LCASP\obj\Release\net7.0\PubTmp\Out\LCASP.pdb

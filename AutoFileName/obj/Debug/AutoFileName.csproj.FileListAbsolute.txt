@@ -1,0 +1,14 @@
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.csproj.AssemblyReference.cache
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.csproj.SuggestedBindingRedirects.cache
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.Form1.resources
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.Properties.Resources.resources
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.csproj.GenerateResource.cache
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.csproj.CoreCompileInputs.cache
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\example.txt
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\video\1-asdfasf.txt
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\video_out\TextFile1.txt
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\AutoFileName.exe.config
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\AutoFileName.exe
+C:\Users\PXQ\Desktop\LC\AutoFileName\bin\Debug\AutoFileName.pdb
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.exe
+C:\Users\PXQ\Desktop\LC\AutoFileName\obj\Debug\AutoFileName.pdb

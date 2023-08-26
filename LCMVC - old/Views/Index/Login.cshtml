@@ -1,0 +1,45 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<section class="py-4 py-xl-5">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 style="color: var(--bs-blue);">影像资源检索平台</h2>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-6 col-xl-4">
+                <div class="card mb-5">
+                    <div class="card-body d-flex flex-column align-items-center">
+                        <form class="text-center" method="post" asp-controller="Index" asp-action="Login">
+                            <div class="mb-3"><input class="form-control" type="text" name="username" placeholder="用户名"></div>
+                            <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="密码"></div>
+                            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit">登录</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (Model.ShowLoginError == true)
+        {
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p>用户名或密码错误</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<div id="DIV">
+
+</div>
+
+@section Scripts
+{
+    <script src="~/js/test.js"></script>
+}

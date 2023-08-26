@@ -1,0 +1,227 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model AdminIndexModel
+@{
+}
+
+<div class="container">
+    <div class="row" style="padding-top: 20px">
+        <div class="col-2"><label class="col-form-label" id="currentuserlabel" name="@Model.CurrentUser.Id">管理员：@Model.CurrentUser.Username，你好</label></div>
+        <div class="col-2"><button class="btn btn-link" type="button" onclick="onMediaInfoDetailOpen()">上传文件</button></div>
+        <div class="col-2"><button class="btn btn-primary" type="button" onclick="onExportTableMediaList()">导出查询表格数据</button></div>
+    </div>
+    @*    <form method="post" asp-controller="User" asp-action="Search" onsubmit="oncustompost()">*@
+    <div class="row" style="padding-top: 20px">
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="video_check" name="mediatype" value="video" checked><label class="form-check-label" for="">视频素材</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="ae_check" name="mediatype" value="ae"><label class="form-check-label" for="">AE模板</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="image_check" name="mediatype" value="picture"><label class="form-check-label" for="">图片素材</label></div>
+        </div>
+        <div class="col-2">
+            <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="document_check" name="mediatype" value="document"><label class="form-check-label" for="">文档</label></div>
+        </div>
+    </div>
+    <div class="row" style="padding-top: 20px">
+        <div class="col-2">
+            <input type="text" placeholder="标题" class="form-control" id="titleinput" name="title">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control input-datepicker" placeholder="发布时间" name="publishdate" id="publishdate">
+        </div>
+        <div class="col-3">
+            <div class="treeselect-area"></div>
+            <input type="hidden" class="form-control treeselect-area-hidden" name="areaselected" placeholder="领域" id="areaselected" />
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" placeholder="关键词（多个关键词使用空格间隔）" name="keywords" id="keywords">
+        </div>
+        <div class="col-1">
+            <button class="btn btn-primary" type="button" onclick="getmediainfo()">检索</button>
+        </div>
+    </div>
+    @*    </form>*@
+    <div class="row" style="padding-top: 20px">
+        <div class="col">
+            <label class="form-label fw-light" style="font-size: 14px;">
+                显示顺序：
+                <select class="form-select-sm" id="orderselect" onchange="showMediaListByOrder()">
+                    <option value="发布时间" selected>发布时间</option>
+                    <option value="评分">评分</option>
+                    <option value="热度">热度</option>
+                </select>
+            </label>
+        </div>
+    </div>
+    <div class="row loading">
+        <h1 class="temph1">处理中...</h1>
+    </div>
+    <div class="row tablelist">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table" style="table-layout: fixed; width: 100%;" id="medialisttable">
+                    <thead>
+                        <tr>
+                            <th style="width: 14.2%;">原标题</th>
+                            <th style="width: 14.2%;">中文题名</th>
+                            <th style="width: 14.2%;">关键词</th>
+                            <th style="width: 14.2%;">画面信息</th>
+                            <th style="width: 14.2%;">时长</th>
+                            <th style="width: 14.2%;">预览</th>
+                            <th style="width: 14.2%;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteConfirmModal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">确认操作</h4>
+            </div>
+            <div class="modal-body">
+                <h4>
+                    即将删除：
+                </h4>
+                <h4 id="deletemediainfo">
+
+                </h4>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" onclick="onDeleteCancel()">取消</button>
+                <button type="button" class="btn btn-primary" onclick="onDeleteConfirm()">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mediaInfoDetailModel" role="dialog">
+    <div class="modal-dialog modal-xl">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row" id="detail_mediaID_div">
+                        <div class="col-auto align-self-center"><label class="col-form-label" id="detail_mediaID" style="margin-right: 8px;">文件编号i：</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">类型：</label></div>
+                        <div class="col-auto align-self-center">
+                            <select id="detail_mediatype">
+                                <option value="视频素材" selected>视频素材</option>
+                                <option value="ae素材">ae素材</option>
+                                <option value="图片素材">图片素材</option>
+                                <option value="文档素材">文档素材</option>
+                            </select>
+                        </div>
+                        <div class="col-auto align-self-center"><label id="detail_mediatypeerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">领域d：</label></div>
+                        <div class="col-5 align-self-center">
+                            <div class="detail_mediaarea_tree" id="detail_mediaarea_tree"></div>
+                            <input type="hidden" class="form-control treeselect-area-hidden-detail" name="detail_mediaarea" placeholder="领域" id="detail_mediaarea" />
+                        </div>
+                        <div class="col-auto align-self-center"><label id="detail_mediaareaerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">评分：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediaaverstar" type="number" value="-1" min="-1" max="5" step="1" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediaaverstarerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;">-1分表示新素材，还未被567评分</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">后缀名：</label></div>
+                        <div class="col-auto align-self-center">
+                            <select id="detail_mediaextension">
+                                <option value="mp4" selected>mp4</option>
+                                <option value="srt">srt</option>
+                                <option value="pdf">pdf</option>
+                                <option value="docx">docx</option>
+                                <option value="aep">aep</option>
+                            </select>
+                        </div>
+                        <div class="col-auto align-self-center"><label id="detail_mediaextensionerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">素材信息：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediainfo" type="text" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediainfoerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">关键词：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediakeyword" type="text" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediakeyworderror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;">多个关键词请用空格分隔</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">文件路径：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediapath" type="text" /></div>
+                        <div class="col-auto align-self-center"><input type="file" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediapatherror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">播放量：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediaplaycount" type="number" value="0" min="0" max="999999" step="1" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediaplaycounterror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">发布时间：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediapublishdate" type="date" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediapublishdateerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">清晰度：</label></div>
+                        <div class="col-auto align-self-center">
+                            <select id="detail_mediaquality">
+                                <option value="4K" selected>4K</option>
+                                <option value="1080p">1080p</option>
+                                <option value="720p">720p</option>
+                                <option value="480p">480p</option>
+                                <option value="320p">320p</option>
+                            </select>
+                        </div>
+                        <div class="col-auto align-self-center"><label id="detail_mediaqualityerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">时长：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediatime" type="text" value="00:00:00" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediatimeerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;">时:分:秒</label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">原标题：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediatitle" type="text" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediatitleerror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 align-self-center"><label class="col-form-label" style="margin-right: 8px;">中文标题：</label></div>
+                        <div class="col-auto align-self-center"><input id="detail_mediatitle_zh" type="text" /></div>
+                        <div class="col-auto align-self-center"><label id="detail_mediatitle_zherror" class="col-form-label" style="color: var(--bs-red);font-size: 10px;font-weight: bold;margin-right: 8px;margin-left: 8px;"></label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" onclick="onMediaInfoDetailClose()">放弃</button>
+                @*                <button type="button" class="btn btn-secondary" onclick="onMediaInfoDetailTempSave()">暂存并关闭</button>*@
+@*                <button type="button" class="btn btn-secondary" onclick="onMediaInfoDetailUploadAndNew()">上传并新建</button>*@
+                <button type="button" class="btn btn-primary" onclick="onMediaInfoDetailUpload()">上传</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/signalrinit.js"></script>
+    <script src="~/js/areatree.js"></script>
+    <script src="~/js/monthpicker.js"></script>
+    <script src="~/js/adminindex.js"></script>
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LCAPI</name>
+    </assembly>
+    <members>
+        <member name="M:LCAPI.Controllers.MediaInfoController.PostNormalResourceSearch(LCAPI.Models.NormalSearch)">
+            <summary>
+            Full Text search in MediaInfo Model, see C# Model or JS class
+            </summary>
+            <param name="search">
+            if search.searchText = "", return all documents in MongoDB, otherwise, 
+            will find the keyword, split by " ", in resource_description,resource_file_name，resource_file_name_zh，resource_keyword and resource_tag.
+            the four parts will be OR relation, while keyword will be AND relation for single column.
+            </param>
+            <returns>
+            MediaInfo List, see C# Model or JS class
+            </returns>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.GetVideoResource(System.String)">
+            <summary>
+            if the video NOT EXIST, using example.mp4 as default video
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.UserInfoController.PostUserInfo(LCAPI.Models.UserInfo)">
+            <summary>
+            Verity UserInfo by username and password
+            </summary>
+            <param name="userLogin">UserInfo Model, look at UserInfo C# Model or UserInfo JS Class, only need Username and Password property</param>
+            <returns>
+            if confirmed return user, or return a new user with id = ""
+            </returns>
+        </member>
+        <member name="T:LCAPI.Models.NormalSearch">
+            <summary>
+            helper class for full text search
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.Search">
+            <summary>
+            helper class for search
+            xx1 xx2 xx3, except PublicDate
+            if null or empty , ignore relate property(col)
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.Search.PublicDate">
+            <summary>
+            yyyy.mm.dd-yyyy.mm.dd
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.MediaInfo">
+            <summary>
+            media info, for now, all properties fit video resource 
+            </summary>
+        </member>
+        <member name="F:LCAPI.Models.MediaInfo.CollectionName">
+            <summary>
+            mongoDB Collention Name
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.Id">
+            <summary>
+            mongodb id
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_type">
+            <summary>
+            resource type, for now, only have "video"
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_keyword">
+            <summary>
+            split by " "
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_tag">
+            <summary>
+            split by " "
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_publish_date">
+            <summary>
+            yyyy.MM.dd
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_file_extension">
+            <summary>
+            "mp4", extension without point "."
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_upload_date">
+            <summary>
+            yyyy.MM.dd
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.resource_upload_user">
+            <summary>
+            user id
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfo.video_duration">
+            <summary>
+            hh:mm:ss
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.UserInfo">
+            <summary>
+            user basic info, see C# Model or JS class
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfo.Id">
+            <summary>
+            mongoDB ID
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfo.Type">
+            <summary>
+            "user" for search and download, "admin" for upload
+            </summary>
+        </member>
+    </members>
+</doc>

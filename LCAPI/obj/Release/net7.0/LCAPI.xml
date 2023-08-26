@@ -1,0 +1,1208 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LCAPI</name>
+    </assembly>
+    <members>
+        <member name="T:LCAPI.Controllers.AeInfoController">
+            <summary>
+            与AE资源相关的API接口
+            进行了简单的安全验证
+            任何请求都需要添加自定义Request头
+            LCAPI-MODELINFO: "PxQ"
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.FullTextResourceSearch(LCAPI.Models.FullTextSearchJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对AE资源信息进行全文查找
+            
+            查找的范围参看FullText结构，目前包括范围：描述，文件名，关键词，领域，AE标题，插件列表
+            </summary>
+            <param name="search">如果为空字符串，表示返回所有数据</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">AeInfo JSON Array</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.PropertySearch(LCAPI.Models.SearchAeJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对AE资源的某个属性进行检索
+            多属性、多属性值之间使用且的关系
+            如果某个属性对应的JSON数组长度为0，则忽略该属性
+            </summary>
+            <param name="search">如果某个属性对应的JSON数组长度为0，则忽略该属性</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">AeInfo JSON Array</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.GetAeInfoById(System.String)">
+            <summary>
+            根据ID获取AeInfoJSON
+            </summary>
+            <param name="id">aeinfo.id</param>
+            <response code="200">AeInfoJSON</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.UpdateScoreByID(System.String,System.Double)">
+            <summary>
+            资源评分，最高5分，最低0分，小数
+            </summary>
+            <param name="id">aeinfo.id</param>
+            <param name="score">aeinfo.resource_score</param>
+            <response code="200">返回更新后的aeInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.UpdateDownloadCountByID(System.String)">
+            <summary>
+            更新资源下载次数
+            </summary>
+            <param name="id">aeinfo.id</param>
+            <response code="200">返回更新后的aeInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.UpdateViewCountByID(System.String)">
+            <summary>
+            更新AE资源播放次数
+            </summary>
+            <param name="id">aeinfo.id</param>
+            <response code="200">返回更新后的aeInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.UpdateAeInfo(LCAPI.Models.AeInfoJSON)">
+            <summary>
+            更新AE资源
+            
+            实际的数据库操作是，删除再用同样的id创建新的
+            
+            所有JSON参数都需要填写
+            </summary>
+            <param name="aeJson">aeinfo结构，所有属性都需要填写，删除重建，id不变</param>
+            <response code="200">返回更新后的aeInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.UpdateAeDBFromExcel(Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)">
+            <summary>
+            先从GET /Resource/ExcelTemplate/获取的模板，填充数据后，更新数据库
+            </summary>
+            <param name="file">根据GET /Resource/ExcelTemplate获取的模板，填写的数据Excel文件</param>
+            <param name="userId">上传者的userinfo.id字符串</param>
+            <param name="ignore_cell_error">遇到格式错误的Cell，是否使用默认值覆盖，如果不覆盖，该行将作为ErrorRowIndexList返回</param>
+            <response code="200">Excel文件打开成功，返回三组数据：上传成功的AeInfoList，ErrorRowIndexList，ErrorString</response> 
+            <response code="422">Excel文件处理失败</response>
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">ignore_cell_error = true时，userid未找到</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.DeleteAeInfoByID(System.String)">
+            <summary>
+            删除AE资源
+            </summary>
+            <param name="id">aeinfo.id</param>
+            <response code="200">删除成功</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.GetExcelTemplate">
+            <summary>
+            获取数据模板，模板中的列是数据库列的子集
+            </summary>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.GetExcelByIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取数据Excel
+            </summary>
+            <param name="ids">aeinfo.id</param>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.AeInfoController.InsertAeInfo(LCAPI.Models.AeInfoJSON)">
+            <summary>
+            总会成功插入数据，错误的属性值会被默认值代替。AeInfoJSON.id == ""时，插入数据，否则根据id覆盖更新，若未找到则直接插入
+            </summary>
+            <param name="ae">新的数据</param>
+            <response code="200">插入成功，并返回带有id的AeInfoJSON</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="T:LCAPI.Controllers.MediaInfoController">
+            <summary>
+            与视频资源相关的API接口
+            进行了简单的安全验证
+            任何请求都需要添加自定义Request头
+            LCAPI-MEDIAINFO: "pxq"
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.FullTextResourceSearch(LCAPI.Models.FullTextSearchJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对视频资源信息进行全文查找
+            
+            查找的范围参看FullText结构，目前包括范围：描述，文件名，关键词，领域
+            </summary>
+            <param name="search">如果为空字符串，表示返回所有数据</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">MediaInfo JSON Array</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.PropertySearch(LCAPI.Models.SearchJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对视频资源的某个属性进行检索
+            多属性、多属性值之间使用且的关系
+            如果某个属性对应的JSON数组长度为0，则忽略该属性
+            </summary>
+            <param name="search">如果某个属性对应的JSON数组长度为0，则忽略该属性</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">MediaInfo JSON Array</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.GetMediaInfoById(System.String)">
+            <summary>
+            根据ID获取MediaInfoJSON
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <response code="200">MediaInfoJSON</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.UpdateScoreByID(System.String,System.Double)">
+            <summary>
+            资源评分，最高5分，最低0分，小数
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <param name="score">mediainfo.resource_score</param>
+            <response code="200">返回更新后的mediaInfo</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.UpdateDownloadCountByID(System.String)">
+            <summary>
+            更新资源下载次数
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <response code="200">返回更新后的mediaInfo</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.UpdateViewCountByID(System.String)">
+            <summary>
+            更新视频资源播放次数
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <response code="200">返回更新后的mediaInfo</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.UpdateMediaInfo(LCAPI.Models.MediaInfoJSON)">
+            <summary>
+            更新视频资源
+            
+            实际的数据库操作是，删除再用同样的id创建新的
+            
+            所有JSON参数都需要填写
+            </summary>
+            <param name="mediaJson">mediainfo结构，所有属性都需要填写，删除重建，id不变</param>
+            <response code="200">返回更新后的mediaInfo</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.UpdateMediaDBFromExcel(Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)">
+            <summary>
+            先从GET /Resource/ExcelTemplate/获取的模板，填充数据后，更新数据库
+            </summary>
+            <param name="file">根据GET /Resource/ExcelTemplate获取的模板，填写的数据Excel文件</param>
+            <param name="userId">上传者的userinfo.id字符串</param>
+            <param name="ignore_cell_error">遇到格式错误的Cell，是否使用默认值覆盖，如果不覆盖，该行将作为ErrorRowIndexList返回</param>
+            <response code="200">Excel文件打开成功，返回三组数据：上传成功的MediaInfoList，ErrorRowIndexList，ErrorString</response> 
+            <response code="422">Excel文件处理失败</response>
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="404">ignore_cell_error = true时，userid未找到</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.DeleteMediaInfoByID(System.String)">
+            <summary>
+            删除视频资源
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <response code="200">删除成功</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.GetVideoResource(System.String)">
+            <summary>
+            如果服务器（华为云存储）没有该视频，返回example.mp4，使用nginx代理
+            与华为云通讯使用HTTP HEAD
+            </summary>
+            <param name="id">mediainfo.id</param>
+            <response code="200">视频http get链接</response> 
+            <response code="404">视频不存在，返回example.mp4</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.GetExcelTemplate">
+            <summary>
+            获取数据模板，模板中的列是数据库列的子集
+            </summary>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.GetExcelByIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取数据Excel
+            </summary>
+            <param name="ids">mediainfo.id</param>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.MediaInfoController.InsertMediaInfo(LCAPI.Models.MediaInfoJSON)">
+            <summary>
+            总会成功插入数据，错误的属性值会被默认值代替。MediaInfoJSON.id == ""时，插入数据，否则根据id覆盖更新，若未找到则直接插入
+            </summary>
+            <param name="media">新的数据</param>
+            <response code="200">插入成功，并返回带有id的MediaInfoJSON</response> 
+            <response code="403">LCAPI-MEDIAINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="T:LCAPI.Controllers.ModelInfoController">
+            <summary>
+            与模型资源相关的API接口
+            进行了简单的安全验证
+            任何请求都需要添加自定义Request头
+            LCAPI-MODELINFO: "pxq"
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.FullTextResourceSearch(LCAPI.Models.FullTextSearchJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对模型资源信息进行全文查找
+            
+            查找的范围参看FullText结构，目前包括范围：描述，文件名，关键词，领域，模型备注，插件列表
+            </summary>
+            <param name="search">如果为空字符串，表示返回所有数据</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">ModelInfo JSON Array</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.PropertySearch(LCAPI.Models.SearchModelJSON,System.Int32,System.Int32,System.String)">
+            <summary>
+            对模型资源的某个属性进行检索
+            多属性、多属性值之间使用且的关系
+            如果某个属性对应的JSON数组长度为0，则忽略该属性
+            </summary>
+            <param name="search">如果某个属性对应的JSON数组长度为0，则忽略该属性</param>
+            <param name="page">字符串：当前所处的分页页码，起始值为1</param>
+            <param name="page_size">每页包含多少条数据</param> 
+            <param name="order">正序："asc"，倒序："desc"，目前仅对resource_publish_date排序</param> 
+            <response code="200">ModelInfo JSON Array</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.GetModelInfoById(System.String)">
+            <summary>
+            根据ID获取ModelInfoJSON
+            </summary>
+            <param name="id">modelinfo.id</param>
+            <response code="200">ModelInfoJSON</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.UpdateScoreByID(System.String,System.Double)">
+            <summary>
+            资源评分，最高5分，最低0分，小数
+            </summary>
+            <param name="id">modelinfo.id</param>
+            <param name="score">modelinfo.resource_score</param>
+            <response code="200">返回更新后的modelInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.UpdateDownloadCountByID(System.String)">
+            <summary>
+            更新资源下载次数
+            </summary>
+            <param name="id">modelinfo.id</param>
+            <response code="200">返回更新后的modelInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.UpdateViewCountByID(System.String)">
+            <summary>
+            更新模型资源播放次数
+            </summary>
+            <param name="id">modelinfo.id</param>
+            <response code="200">返回更新后的modelInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.UpdateModelInfo(LCAPI.Models.ModelInfoJSON)">
+            <summary>
+            更新模型资源
+            
+            实际的数据库操作是，删除再用同样的id创建新的
+            
+            所有JSON参数都需要填写
+            </summary>
+            <param name="modelJson">modelinfo结构，所有属性都需要填写，删除重建，id不变</param>
+            <response code="200">返回更新后的modelInfo</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">没有找到，id为空</response> 
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.UpdateModelDBFromExcel(Microsoft.AspNetCore.Http.IFormFile,System.String,System.Boolean)">
+            <summary>
+            先从GET /Resource/ExcelTemplate/获取的模板，填充数据后，更新数据库
+            </summary>
+            <param name="file">根据GET /Resource/ExcelTemplate获取的模板，填写的数据Excel文件</param>
+            <param name="userId">上传者的userinfo.id字符串</param>
+            <param name="ignore_cell_error">遇到格式错误的Cell，是否使用默认值覆盖，如果不覆盖，该行将作为ErrorRowIndexList返回</param>
+            <response code="200">Excel文件打开成功，返回三组数据：上传成功的ModelInfoList，ErrorRowIndexList，ErrorString</response> 
+            <response code="422">Excel文件处理失败</response>
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="404">ignore_cell_error = true时，userid未找到</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.DeleteModelInfoByID(System.String)">
+            <summary>
+            删除模型资源
+            </summary>
+            <param name="id">modelinfo.id</param>
+            <response code="200">删除成功</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.GetExcelTemplate">
+            <summary>
+            获取数据模板，模板中的列是数据库列的子集
+            </summary>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.GetExcelByIds(System.Collections.Generic.List{System.String})">
+            <summary>
+            获取数据Excel
+            </summary>
+            <param name="ids">modelinfo.id</param>
+            <response code="200">Excel文件</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.ModelInfoController.InsertModelInfo(LCAPI.Models.ModelInfoJSON)">
+            <summary>
+            总会成功插入数据，错误的属性值会被默认值代替。ModelInfoJSON.id == ""时，插入数据，否则根据id覆盖更新，若未找到则直接插入
+            </summary>
+            <param name="model">新的数据</param>
+            <response code="200">插入成功，并返回带有id的ModelInfoJSON</response> 
+            <response code="403">LCAPI-MODELINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="T:LCAPI.Controllers.NotWorkingShowModel">
+            <summary>
+            没用
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.MediaInfo)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.UserInfo)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.MediaInfoJSON)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.UserInfoJSON)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.ModelInfo)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.ModelInfoJSON)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.RestResultJSON)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.AeInfo)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LCAPI.Controllers.NotWorkingShowModel.NotWorking(LCAPI.Models.AeInfoJSON)">
+            <summary>
+            没用
+            </summary>
+            <param name="notworking"></param>
+            <returns></returns>
+        </member>
+        <member name="T:LCAPI.Controllers.UserInfoController">
+            <summary>
+            与用户信息相关的API接口
+            进行了简单的安全验证
+            任何请求都需要添加自定义Request头
+            LCAPI-USERINFO: "PXQ"
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.UserInfoController.VerifyUserInfo(LCAPI.Models.UserInfoJSON)">
+            <summary>
+            用户登录时，通过用户名和密码进行验证
+            
+            只需要填写username和passwor字段即可
+            
+            测试系统中，111为普通用户，222为管理员
+            </summary>
+            <param name="userLogin">POST DATA：要验证的用户</param>
+            <response code="200">登录成功，返回用户信息</response>
+            <response code="401">用户名或密码错误，此时id为空字符</response>
+            <response code="403">LCAPI-USERINFO错误</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="M:LCAPI.Controllers.UserInfoController.GetUserInfoById(System.String)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="userid">mongodb id</param>
+            <response code="200">登录成功，返回用户信息</response>
+            <response code="403">LCAPI-USERINFO错误</response>
+            <response code="404">未找到，id为空</response>
+            <response code="500">其他未知错误</response>
+        </member>
+        <member name="T:LCAPI.Models.AeInfoJSON">
+            <summary>
+            视频素材数据库
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.id">
+            <summary>
+            MongoDB 内置的主键，一串随机字符
+            创建新的实例时，可以不填，由MongoDB自动生成
+            查找、更新、删除时，可以使用该列进行数据定位
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_type">
+            <summary>
+            固定值：”三维模型“
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_lang">
+            <summary>
+            该类型数据，未使用此列
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_keyword">
+            <summary>
+            关键词信息
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_tag">
+            <summary>
+            模型类型
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_publish_date">
+            <summary>
+            该资源在网络中被发布的时间，格式为ISO UTC Date
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_description">
+            <summary>
+            任意长度字符串，一段文字
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_source_uri">
+            <summary>
+            资源来源，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_file_name">
+            <summary>
+            原始资源名，任意字符串，同中文文件名
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_file_name_zh">
+            <summary>
+            中文资源名称，任意字符串，同原始文件名
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_file_extension">
+            <summary>
+            任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_file_size">
+            <summary>
+            单位为MB，可以接受小数，double类型
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_upload_date">
+            <summary>
+            该资源被上传至本系统中的时间
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_upload_user">
+            <summary>
+            上传用户的MongoDB UserInfo Id字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_upload_username">
+            <summary>
+            上传用户的MongoDB UserInfo.Username属性值
+            
+            因为常用，所以固化AeInfo在数据中
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_score">
+            <summary>
+            资源评分，小数，最高5分，最低0分
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_download_count">
+            <summary>
+            资源下载次数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.resource_view_count">
+            <summary>
+            资源播放次数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_clarity">
+            <summary>
+            视频清晰度，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_download_url">
+            <summary>
+            未找到时，返回example.zip
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_duration">
+            <summary>
+            AE资源的总秒数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_plugins">
+            <summary>
+            AE资源使用的插件名称列表
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_title">
+            <summary>
+            AE资源的标题
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_url">
+            <summary>
+            未找到时，返回example.mp4，预览的视频格式都是MP4
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.AeInfoJSON.ae_version">
+            <summary>
+            版本号，任意字符串
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.MediaInfoJSON">
+            <summary>
+            视频素材数据库
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.id">
+            <summary>
+            MongoDB 内置的主键，一串随机字符
+            创建新的实例时，可以不填，由MongoDB自动生成
+            查找、更新、删除时，可以使用该列进行数据定位
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_type">
+            <summary>
+            固定值：“视频资源”
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_lang">
+            <summary>
+            语种信息，可以为多语种
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_keyword">
+            <summary>
+            关键词信息
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_tag">
+            <summary>
+            领域
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_publish_date">
+            <summary>
+            该资源在网络中被发布的时间，格式为ISO UTC Date
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_description">
+            <summary>
+            任意长度字符串，一段文字
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_source_uri">
+            <summary>
+            资源来源，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_file_name">
+            <summary>
+            原始资源名（外文），任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_file_name_zh">
+            <summary>
+            中文资源名称，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_file_extension">
+            <summary>
+            固定值：“.mp4”，小写字母
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_file_size">
+            <summary>
+            单位为MB，可以接受小数，double类型
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_upload_date">
+            <summary>
+            该资源被上传至本系统中的时间
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_upload_user">
+            <summary>
+            上传用户的MongoDB UserInfo Id字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_upload_username">
+            <summary>
+            上传用户的MongoDB UserInfo.Username属性值
+            
+            因为常用，所以固化MediaInfo在数据中
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.video_clarity">
+            <summary>
+            视频清晰度，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.video_duration">
+            <summary>
+            视频长度，单位为秒，实际类型为Int64
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.video_url">
+            <summary>
+            视频URL，GET，如果服务器中没有该视频，播放的是example.mp4
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.video_download_url">
+            <summary>
+            视频下载URL，GET，如果服务器中没有该视频，下载的是example.mp4
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_score">
+            <summary>
+            资源评分，小数，最高5分，最低0分
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_download_count">
+            <summary>
+            资源下载次数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.MediaInfoJSON.resource_view_count">
+            <summary>
+            资源播放次数
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.ModelInfoJSON">
+            <summary>
+            视频素材数据库
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.id">
+            <summary>
+            MongoDB 内置的主键，一串随机字符
+            创建新的实例时，可以不填，由MongoDB自动生成
+            查找、更新、删除时，可以使用该列进行数据定位
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_type">
+            <summary>
+            固定值：”模型资源“
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_lang">
+            <summary>
+            该类型数据，未使用此列
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_keyword">
+            <summary>
+            关键词信息
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_tag">
+            <summary>
+            模型类型
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_publish_date">
+            <summary>
+            该资源在网络中被发布的时间，格式为ISO UTC Date
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_description">
+            <summary>
+            任意长度字符串，一段文字
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_source_uri">
+            <summary>
+            资源来源，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_file_name">
+            <summary>
+            原始资源名，任意字符串，同中文文件名
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_file_name_zh">
+            <summary>
+            中文资源名称，任意字符串，同原始文件名
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_file_extension">
+            <summary>
+            任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_file_size">
+            <summary>
+            单位为MB，可以接受小数，double类型
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_upload_date">
+            <summary>
+            该资源被上传至本系统中的时间
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，显示时需要转换
+            
+            数据库中保存的都是UTC+0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_upload_user">
+            <summary>
+            上传用户的MongoDB UserInfo Id字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_upload_username">
+            <summary>
+            上传用户的MongoDB UserInfo.Username属性值
+            
+            因为常用，所以固化ModelInfo在数据中
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_score">
+            <summary>
+            资源评分，小数，最高5分，最低0分
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_download_count">
+            <summary>
+            资源下载次数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.resource_view_count">
+            <summary>
+            资源播放次数
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_download_url">
+            <summary>
+            模型下载时使用的链接，实际是一个zip包，未找到时使用example.zip
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_editor_version">
+            <summary>
+            任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_has_texture">
+            <summary>
+            是否包含贴图
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_notes">
+            <summary>
+            备注，任意字符串
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_plugins">
+            <summary>
+            使用的插件名称列表
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.ModelInfoJSON.model_thumbnail">
+            <summary>
+            模型预览图，GET URL，未找到时使用example.png
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.RestResultJSON">
+            <summary>
+            StatusCode不是200的时候，返回这个JSON结构描述错误信息
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.RestResultJSON.code">
+            <summary>
+            Status Code
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.RestResultJSON.message">
+            <summary>
+            Error Message
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.RestResultJSON.data">
+            <summary>
+            Useless
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.FullTextSearchJSON">
+            <summary>
+            全文检索时使用的数据结构
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.FullTextSearchJSON.searchtext">
+            <summary>
+            如果为空字符串数组，表示返回所有数据
+            空字符串数组：不是null，是List.Count = 0
+            具有多个值时，使用且关系进行查询
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.SearchJSON">
+            <summary>
+            属性查找
+            多个属性、多个属性值时，使用且关系进行查询
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_publish_date_start">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_publish_date_end">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_keyword">
+            <summary>
+            关键字，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_lang">
+            <summary>
+            语种，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_tag">
+            <summary>
+            领域，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_description">
+            <summary>
+            描述，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchJSON.resource_file_name">
+            <summary>
+            同时查询原始文件名和中文文件名，或关系，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.SearchModelJSON">
+            <summary>
+            属性查找
+            多个属性、多个属性值时，使用且关系进行查询
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_publish_date_start">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_publish_date_end">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_keyword">
+            <summary>
+            关键字，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_tag">
+            <summary>
+            模型类型，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_description">
+            <summary>
+            描述，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.resource_file_name">
+            <summary>
+            同时查询原始文件名和中文文件名，或关系，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.model_has_texture">
+            <summary>
+            是否包含贴图，0：不包含，1：包含，其他值：忽略该项
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchModelJSON.model_notes">
+            <summary>
+            模型备注，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.SearchAeJSON">
+            <summary>
+            属性查找
+            多个属性、多个属性值时，使用且关系进行查询
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_publish_date_start">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_publish_date_end">
+            <summary>
+            该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+            
+            2023-07-19T16:00:00.000+00:00
+            
+            2023-07-19T16:00:00.000Z
+            
+            以上两个例子为UTC+0，填写时需要转换
+            
+            后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_keyword">
+            <summary>
+            关键字，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_tag">
+            <summary>
+            模型类型，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_description">
+            <summary>
+            描述，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.resource_file_name">
+            <summary>
+            同时查询原始文件名和中文文件名，或关系，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.SearchAeJSON.ae_title">
+            <summary>
+            AE标题，空数组表示忽略此项，List.Count == 0
+            </summary>
+        </member>
+        <member name="T:LCAPI.Models.UserInfoJSON">
+            <summary>
+            用户信息类
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfoJSON.id">
+            <summary>
+            MongoDB 内置的主键，一串随机字符
+            创建新的实例时，可以不填，由MongoDB自动生成
+            查找、更新、删除时，可以使用该列进行数据定位
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfoJSON.type">
+            <summary>
+            字符串，表示用户类型
+            "user"：普通用户
+            "admin"：管理员
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfoJSON.username">
+            <summary>
+            用户名，任意字符串，英文或数字
+            </summary>
+        </member>
+        <member name="P:LCAPI.Models.UserInfoJSON.password">
+            <summary>
+            密码，任意字符串
+            </summary>
+        </member>
+        <member name="T:LCAPI.MyHeaderFilter">
+            <summary>
+            Operation filter to add the requirement of the custom header
+            </summary>
+        </member>
+    </members>
+</doc>
