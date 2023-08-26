@@ -14,20 +14,20 @@ using System.Net;
 namespace LCAPI.Models
 {
     [BsonIgnoreExtraElements]
-    public class MediaInfo
+    public class IMGInfo
     {
-        public static String CollectionName = "media";
+        public static String CollectionName = "img";
 
-        private static IMongoCollection<MediaInfo> _collation;
+        private static IMongoCollection<IMGInfo> _collation;
         private static bool connected = false;
 
-        public static IMongoCollection<MediaInfo> DBCollation
+        public static IMongoCollection<IMGInfo> DBCollation
         {
             get
             {
                 if (connected == false)
                 {
-                    _collation = MongoDBHelper.Database.GetCollection<MediaInfo>(CollectionName);
+                    _collation = MongoDBHelper.Database.GetCollection<IMGInfo>(CollectionName);
                 }
                 return _collation;
             }
@@ -35,7 +35,7 @@ namespace LCAPI.Models
 
         [BsonId]
         public ObjectId Id { get; set; }
-        public string resource_type { get; set; } // 资源类型，固定 视频资源
+        public string resource_type { get; set; } // 资源类型，固定 图片资源
         public List<String> resource_lang { get; set; } // 语种
         public List<String> resource_keyword { get; set; } // 关键字
         public List<String> resource_tag { get; set; }// 标签（领域）
@@ -53,8 +53,6 @@ namespace LCAPI.Models
         public DateTime resource_upload_date { get; set; }// 资源上传时间，Local UTC+8
         public ObjectId resource_upload_user { get; set; } // 资源上传人
         public string resource_upload_username { get; set; } // 资源上传人
-        public string video_clarity { get; set; } // 视频清晰度
-        public Int64 video_duration { get; set; } // 视频时长，秒
 
         public double resource_score { get; set; } // 资源评分，最低0分，最高5分
 
@@ -62,12 +60,14 @@ namespace LCAPI.Models
 
         public Int64 resource_view_count { get; set; } // 浏览次数
 
-        public List<string> video_equipment_tag { get; set; } // 装备分类
+        public List<string> img_equipment_tag { get; set; } // 装备分类
 
-        public MediaInfo()
+        public string img_clarity { get; set; } // 图片清晰度
+
+        public IMGInfo()
         {
             Id = ObjectId.Empty;
-            resource_type = "视频资源";
+            resource_type = "图片资源";
             resource_lang = new List<string>();
             resource_keyword = new List<string>();
             resource_tag = new List<string>();
@@ -76,20 +76,19 @@ namespace LCAPI.Models
             resource_source_uri = "";
             resource_file_name = "";
             resource_file_name_zh = "";
-            resource_file_extension = ".mp4";
+            resource_file_extension = ".png";
             resource_file_size_string = "";
             resource_upload_date = DateTime.Now; // UTC+8
             resource_upload_user = ObjectId.Empty;
             resource_upload_username = "";
-            video_clarity = "";
-            video_duration = 0;
             resource_score = 0;
             resource_download_count = 0;
             resource_view_count = 0;
-            video_equipment_tag = new List<string>();
+            img_clarity = "";
+            img_equipment_tag = new List<string>();
         }
 
-        public MediaInfo(MediaInfoJSON json)
+        public IMGInfo(IMGInfoJSON json)
         {
             var newId = ObjectId.Empty;
             Id = ObjectId.TryParse(json.id ?? "", out newId) ? newId : ObjectId.Empty;
@@ -116,22 +115,21 @@ namespace LCAPI.Models
             resource_upload_user = ObjectId.TryParse(json.resource_upload_user ?? "", out uId) ? uId : ObjectId.Empty;
 
             resource_upload_username = json.resource_upload_username;
-            video_clarity = json.video_clarity;
-            video_duration = json.video_duration;
             resource_score = json.resource_score;
             resource_download_count = json.resource_download_count;
             resource_view_count = json.resource_view_count;
-            video_equipment_tag = json.video_equipment_tag;
+            img_clarity = json.img_clarity;
+            img_equipment_tag = json.img_equipment_tag;
         }
 
-        public MediaInfoJSON ToMediaInfoJSON()
+        public IMGInfoJSON ToIMGInfoJSON()
         {
-            return new MediaInfoJSON(this);
+            return new IMGInfoJSON(this);
         }
 
-        public static List<MediaInfo> FullTextFind(List<string> keywords, int page, int page_size, string order, out int total_count)
+        public static List<IMGInfo> FullTextFind(List<string> keywords, int page, int page_size, string order, out int total_count)
         {
-            var query = MediaInfo.DBCollation.AsQueryable();
+            var query = IMGInfo.DBCollation.AsQueryable();
 
             if (keywords == null || keywords.Count == 0)
             {
@@ -144,7 +142,7 @@ namespace LCAPI.Models
                                     || keywords.All(kw => t.resource_file_name_zh.Contains(kw))
                                     || keywords.All(kw => t.resource_keyword.Contains(kw))
                                     || keywords.All(kw => t.resource_tag.Contains(kw))
-                                    || keywords.All(kw => t.video_equipment_tag.Contains(kw)));
+                                    || keywords.All(kw => t.img_equipment_tag.Contains(kw)));
             }
 
             if (order == "asc")
@@ -162,9 +160,9 @@ namespace LCAPI.Models
             return query.ToList();
         }
 
-        public static List<MediaInfo> Search(SearchJSON search, int page, int page_size, string order, out int total)
+        public static List<IMGInfo> Search(SearchIMGJSON search, int page, int page_size, string order, out int total)
         {
-            // 视频发布时间范围，如果转换失败，默认起始结束时间都是当前
+            // 图片发布时间范围，如果转换失败，默认起始结束时间都是当前
             var startPublishDate = DateTime.Now;
             var endPublishDate = DateTime.Now;
             var startPublishDateUTC = DateTimeOffset.Now;
@@ -175,16 +173,16 @@ namespace LCAPI.Models
             startPublishDate = startPublishDateUTC.LocalDateTime;
             endPublishDate = endPublishDateUTC.LocalDateTime;
 
-            var query = MediaInfo.DBCollation.AsQueryable();
+            var query = IMGInfo.DBCollation.AsQueryable();
 
             if (search.resource_keyword.Count > 0)
             {
                 query = query.Where(t => search.resource_keyword.All(kw => t.resource_keyword.Contains(kw)));
             }
 
-            if(search.video_equipment_tag.Count > 0)
+            if(search.img_equipment_tag.Count > 0)
             {
-                query = query.Where(t => search.video_equipment_tag.All(kw => t.video_equipment_tag.Contains(kw)));
+                query = query.Where(t => search.img_equipment_tag.All(kw => t.img_equipment_tag.Contains(kw)));
             }
 
             if (search.resource_lang.Count > 0)
@@ -229,79 +227,79 @@ namespace LCAPI.Models
             return query.ToList();
         }
 
-        public static MediaInfo? UpdateScore(string id, double value)
+        public static IMGInfo? UpdateScore(string id, double value)
         {
-            var filter = Builders<MediaInfo>.Filter
+            var filter = Builders<IMGInfo>.Filter
                 .Eq(t => t.Id, new ObjectId(id));
-            var update = Builders<MediaInfo>.Update
+            var update = Builders<IMGInfo>.Update
                 .Set(t => t.resource_score, value);
-            var res = MediaInfo.DBCollation.UpdateOne(filter, update);
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
+            var res = IMGInfo.DBCollation.UpdateOne(filter, update);
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
         }
 
-        public static MediaInfo? UpdateDownloadCount(string id)
+        public static IMGInfo? UpdateDownloadCount(string id)
         {
-            var old = MediaInfo.DBCollation.AsQueryable().Where(t => t.Id == new ObjectId(id)).FirstOrDefault();
+            var old = IMGInfo.DBCollation.AsQueryable().Where(t => t.Id == new ObjectId(id)).FirstOrDefault();
             var oldValue = old == null ? 0 : old.resource_download_count;
 
-            var filter = Builders<MediaInfo>.Filter
+            var filter = Builders<IMGInfo>.Filter
                 .Eq(t => t.Id, new ObjectId(id));
-            var update = Builders<MediaInfo>.Update
+            var update = Builders<IMGInfo>.Update
                 .Set(t => t.resource_download_count, oldValue + 1);
-            var res = MediaInfo.DBCollation.UpdateOne(filter, update);
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
+            var res = IMGInfo.DBCollation.UpdateOne(filter, update);
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
         }
 
-        public static MediaInfo? UpdateViewCount(string id)
+        public static IMGInfo? UpdateViewCount(string id)
         {
-            var old = MediaInfo.DBCollation.AsQueryable().Where(t => t.Id == new ObjectId(id)).FirstOrDefault();
+            var old = IMGInfo.DBCollation.AsQueryable().Where(t => t.Id == new ObjectId(id)).FirstOrDefault();
 
             var oldValue = old == null ? 0 : old.resource_view_count;
 
-            var filter = Builders<MediaInfo>.Filter.Eq(t => t.Id, new ObjectId(id));
-            var update = Builders<MediaInfo>.Update.Set(t => t.resource_view_count, oldValue + 1);
-            var res = MediaInfo.DBCollation.UpdateOne(filter, update);
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
+            var filter = Builders<IMGInfo>.Filter.Eq(t => t.Id, new ObjectId(id));
+            var update = Builders<IMGInfo>.Update.Set(t => t.resource_view_count, oldValue + 1);
+            var res = IMGInfo.DBCollation.UpdateOne(filter, update);
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
         }
 
-        public static MediaInfo? Insert(MediaInfo media)
+        public static IMGInfo? Insert(IMGInfo img)
         {
-            var filter = Builders<MediaInfo>.Filter.Eq(t => t.Id, media.Id);
+            var filter = Builders<IMGInfo>.Filter.Eq(t => t.Id, img.Id);
 
             if (filter != null)
-                MediaInfo.DBCollation.DeleteOne(filter);
+                IMGInfo.DBCollation.DeleteOne(filter);
 
-            MediaInfo.DBCollation.InsertOne(media);
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == media.Id);
+            IMGInfo.DBCollation.InsertOne(img);
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == img.Id);
         }
 
-        public static MediaInfo? Update(MediaInfo media)
+        public static IMGInfo? Update(IMGInfo img)
         {
-            var filter = Builders<MediaInfo>.Filter.Eq(t => t.Id, media.Id);
+            var filter = Builders<IMGInfo>.Filter.Eq(t => t.Id, img.Id);
 
             if (filter != null)
-                MediaInfo.DBCollation.DeleteOne(filter);
+                IMGInfo.DBCollation.DeleteOne(filter);
 
-            MediaInfo.DBCollation.InsertOne(media);
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == media.Id);
+            IMGInfo.DBCollation.InsertOne(img);
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == img.Id);
         }
 
         public static void Delete(string id)
         {
-            var filter = Builders<MediaInfo>.Filter.Eq(t => t.Id, new ObjectId(id));
-            var res = MediaInfo.DBCollation.DeleteOne(filter);
+            var filter = Builders<IMGInfo>.Filter.Eq(t => t.Id, new ObjectId(id));
+            var res = IMGInfo.DBCollation.DeleteOne(filter);
         }
 
-        public static MediaInfo? GetMediaInfoById(string id)
+        public static IMGInfo? GetIMGInfoById(string id)
         {
-            return MediaInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
+            return IMGInfo.DBCollation.AsQueryable().FirstOrDefault(t => t.Id == new ObjectId(id));
         }
 
-        public static void UpdateDBFromExcel(string filePath, UserInfo user, bool ignoreError,out string errorString, out List<MediaInfo> newMedias, out List<int> newErrorMediasRowIndex)
+        public static void UpdateDBFromExcel(string filePath, UserInfo user, bool ignoreError,out string errorString, out List<IMGInfo> newIMGs, out List<int> newErrorIMGsRowIndex)
         {
             errorString = "";
-            newMedias = new List<MediaInfo>();
-            newErrorMediasRowIndex = new List<int>();
+            newIMGs = new List<IMGInfo>();
+            newErrorIMGsRowIndex = new List<int>();
 
             try
             {
@@ -315,15 +313,15 @@ namespace LCAPI.Models
                     {
                         try
                         {
-                            var mediaInfo = new MediaInfo();
-                            mediaInfo.Id = ObjectId.Empty;
-                            mediaInfo.resource_type = "视频资源";
+                            var imgInfo = new IMGInfo();
+                            imgInfo.Id = ObjectId.Empty;
+                            imgInfo.resource_type = "图片资源";
 
-                            mediaInfo.resource_lang = (worksheet.Cells[rowindex, 1].Value?.ToString() ?? "").Split(' ').ToList();
+                            imgInfo.resource_lang = (worksheet.Cells[rowindex, 1].Value?.ToString() ?? "").Split(' ').ToList();
 
-                            mediaInfo.resource_keyword = (worksheet.Cells[rowindex, 2].Value?.ToString() ?? "").Split(' ').ToList();
+                            imgInfo.resource_keyword = (worksheet.Cells[rowindex, 2].Value?.ToString() ?? "").Split(' ').ToList();
 
-                            mediaInfo.resource_tag = (worksheet.Cells[rowindex, 3].Value?.ToString() ?? "").Split(' ').ToList();
+                            imgInfo.resource_tag = (worksheet.Cells[rowindex, 3].Value?.ToString() ?? "").Split(' ').ToList();
 
                             var publishDate = DateTime.Now;
                             var publishDateRes = DateTime.TryParse(worksheet.Cells[rowindex, 4].Value?.ToString() ?? "", out publishDate);
@@ -335,56 +333,29 @@ namespace LCAPI.Models
                             {
                                 throw new Exception("resource_publish_date format error");
                             }
-                            mediaInfo.resource_publish_date = publishDate;
+                            imgInfo.resource_publish_date = publishDate;
 
-                            mediaInfo.resource_description = worksheet.Cells[rowindex, 5].Value?.ToString() ?? "";
-                            mediaInfo.resource_source_uri = worksheet.Cells[rowindex, 6].Value?.ToString() ?? "";
-                            mediaInfo.resource_file_name = worksheet.Cells[rowindex, 7].Value?.ToString() ?? "";
-                            mediaInfo.resource_file_name_zh = worksheet.Cells[rowindex, 8].Value?.ToString() ?? "";
-                            mediaInfo.resource_file_extension = ".mp4";
-                            mediaInfo.resource_file_size_string = worksheet.Cells[rowindex, 9].Value?.ToString() ?? "";
+                            imgInfo.resource_description = worksheet.Cells[rowindex, 5].Value?.ToString() ?? "";
+                            imgInfo.resource_source_uri = worksheet.Cells[rowindex, 6].Value?.ToString() ?? "";
+                            imgInfo.resource_file_name = worksheet.Cells[rowindex, 7].Value?.ToString() ?? "";
+                            imgInfo.resource_file_name_zh = worksheet.Cells[rowindex, 8].Value?.ToString() ?? "";
+                            imgInfo.resource_file_extension = worksheet.Cells[rowindex, 9].Value?.ToString() ?? "";
+                            imgInfo.resource_file_size_string = worksheet.Cells[rowindex, 10].Value?.ToString() ?? "";
+                            imgInfo.img_clarity = worksheet.Cells[rowindex, 11].Value?.ToString() ?? "";
 
-                            mediaInfo.resource_upload_date = DateTime.Now;
-                            mediaInfo.resource_upload_user = user.Id;
-                            mediaInfo.resource_upload_username = user.username;
-                            mediaInfo.video_clarity = worksheet.Cells[rowindex, 10].Value?.ToString() ?? "";
+                            imgInfo.resource_score = 0;
+                            imgInfo.resource_download_count = 0;
+                            imgInfo.resource_view_count = 0;
 
-                            var durationRes = true;
-                            var duration = worksheet.Cells[rowindex, 11].Value?.ToString() ?? "0:0:0";
-                            if (duration.Split(':').Length != 3)
-                            {
-                                duration = "0:0:0";
-                                durationRes = false;
-                            }
-                            var hour = 0;
-                            durationRes = int.TryParse(duration.Split(':')[0], out hour) == true ? durationRes : false;
-                            var minute = 0;
-                            durationRes = int.TryParse(duration.Split(":")[1], out minute) == true ? durationRes : false;
-                            var second = 0;
-                            durationRes = int.TryParse(duration.Split(":")[2], out second) == true ? durationRes : false;
-                            mediaInfo.video_duration = hour * 3600 + minute * 60 + second;
-                            if (durationRes == false && ignoreError == true)
-                            {
-                                errorString += $"row_{rowindex}_warring: video_duration format error\r\n\r\n";
-                            }
-                            else if (durationRes == false && ignoreError == false)
-                            {
-                                throw new Exception("video_duration format error");
-                            }
+                            imgInfo.img_equipment_tag = (worksheet.Cells[rowindex, 12].Value?.ToString() ?? "").Split(' ').ToList();
 
-                            mediaInfo.resource_score = 0;
-                            mediaInfo.resource_download_count = 0;
-                            mediaInfo.resource_view_count = 0;
-
-                            mediaInfo.video_equipment_tag = (worksheet.Cells[rowindex, 12].Value?.ToString() ?? "").Split(' ').ToList();
-
-                            MediaInfo.DBCollation.InsertOne(mediaInfo);
-                            newMedias.Add(mediaInfo);
+                            IMGInfo.DBCollation.InsertOne(imgInfo);
+                            newIMGs.Add(imgInfo);
                         }
                         catch (Exception rowEx)
                         {
                             errorString += $"row_{rowindex}_error: {rowEx.Message}\r\n\r\n";
-                            newErrorMediasRowIndex.Add(rowindex);
+                            newErrorIMGsRowIndex.Add(rowindex);
                         }
                     }
                 }
@@ -397,9 +368,9 @@ namespace LCAPI.Models
     }
 
     /// <summary>
-    /// 视频素材数据库
+    /// 图片素材数据库
     /// </summary>
-    public class MediaInfoJSON
+    public class IMGInfoJSON
     {
         /// <summary>
         /// MongoDB 内置的主键，一串随机字符
@@ -409,7 +380,7 @@ namespace LCAPI.Models
         public string id { get; set; }
 
         /// <summary>
-        /// 固定值：“视频资源”
+        /// 固定值：“图片资源”
         /// </summary>
         public string resource_type { get; set; } // 资源类型  
 
@@ -493,29 +464,24 @@ namespace LCAPI.Models
         /// <summary>
         /// 上传用户的MongoDB UserInfo.Username属性值
         /// 
-        /// 因为常用，所以固化MediaInfo在数据中
+        /// 因为常用，所以固化IMGInfo在数据中
         /// </summary>
         public string resource_upload_username { get; set; } // 资源上传人
 
         /// <summary>
-        /// 视频清晰度，任意字符串
+        /// 图片清晰度，任意字符串
         /// </summary>
-        public string video_clarity { get; set; } // 视频清晰度
+        public string img_clarity { get; set; } // 图片清晰度
 
         /// <summary>
-        /// 视频长度，单位为秒，实际类型为Int64
+        /// 图片URL，GET，如果服务器中没有该图片，播放的是example.png
         /// </summary>
-        public Int64 video_duration { get; set; } // 视频时长
+        public string img_url { get; set; }
 
         /// <summary>
-        /// 视频URL，GET，如果服务器中没有该视频，播放的是example.mp4
+        /// 图片下载URL，GET，如果服务器中没有该图片，下载的是example.png
         /// </summary>
-        public string video_url { get; set; }
-
-        /// <summary>
-        /// 视频下载URL，GET，如果服务器中没有该视频，下载的是example.mp4
-        /// </summary>
-        public string video_download_url { get; set; }
+        public string img_download_url { get; set; }
 
         /// <summary>
         /// 资源评分，小数，最高5分，最低0分
@@ -535,12 +501,12 @@ namespace LCAPI.Models
         /// <summary>
         /// 装备分类
         /// </summary>
-        public List<string> video_equipment_tag { get; set; } // 装备分类
+        public List<string> img_equipment_tag { get; set; } // 装备分类
 
-        public MediaInfoJSON()
+        public IMGInfoJSON()
         {
             id = "";
-            resource_type = "视频资源";
+            resource_type = "图片资源";
             resource_lang = new List<string>();
             resource_keyword = new List<string>();
             resource_tag = new List<string>();
@@ -554,51 +520,49 @@ namespace LCAPI.Models
             resource_upload_date = "1900-01-01T00:00:00.000+00:00";
             resource_upload_user = "";
             resource_upload_username = "";
-            video_clarity = "";
-            video_duration = 0;
-            video_url = "";
-            video_download_url = "";
+            img_clarity = "";
+            img_url = "";
+            img_download_url = "";
             resource_score = 0;
             resource_download_count = 0;
             resource_view_count = 0;
-            video_equipment_tag = new List<string>();
+            img_equipment_tag = new List<string>();
         }
 
-        public MediaInfoJSON(MediaInfo media)
+        public IMGInfoJSON(IMGInfo img)
         {
-            id = media.Id.ToString();
-            resource_type = media.resource_type;
-            resource_lang = media.resource_lang;
-            resource_keyword = media.resource_keyword;
-            resource_tag = media.resource_tag;
-            resource_publish_date = new DateTimeOffset(media.resource_publish_date.ToUniversalTime()).ToString();
-            resource_description = media.resource_description;
-            resource_source_uri = media.resource_source_uri;
-            resource_file_name = media.resource_file_name;
-            resource_file_name_zh = media.resource_file_name_zh;
-            resource_file_extension = media.resource_file_extension;
-            resource_file_size_string = media.resource_file_size_string;
-            resource_upload_date = new DateTimeOffset(media.resource_upload_date.ToUniversalTime()).ToString();
-            resource_upload_user = media.resource_upload_user.ToString();
-            resource_upload_username = media.resource_upload_username;
-            video_clarity = media.video_clarity;
-            video_duration = media.video_duration; ; // 实际为Int64
+            id = img.Id.ToString();
+            resource_type = img.resource_type;
+            resource_lang = img.resource_lang;
+            resource_keyword = img.resource_keyword;
+            resource_tag = img.resource_tag;
+            resource_publish_date = new DateTimeOffset(img.resource_publish_date.ToUniversalTime()).ToString();
+            resource_description = img.resource_description;
+            resource_source_uri = img.resource_source_uri;
+            resource_file_name = img.resource_file_name;
+            resource_file_name_zh = img.resource_file_name_zh;
+            resource_file_extension = img.resource_file_extension;
+            resource_file_size_string = img.resource_file_size_string;
+            resource_upload_date = new DateTimeOffset(img.resource_upload_date.ToUniversalTime()).ToString();
+            resource_upload_user = img.resource_upload_user.ToString();
+            resource_upload_username = img.resource_upload_username;
+            img_clarity = img.img_clarity;
 
-            video_url = $"http://114.115.220.129:5500/Resource/{id}.mp4";
-            video_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.mp4";
+            img_url = $"http://114.115.220.129:5500/Resource/{id}.png";
+            img_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.png";
 
             var _httpClient = new HttpClient();
-            var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, video_url));
+            var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, img_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                video_url = $"http://114.115.220.129:5500/Resource/example.mp4";
-                video_download_url = $"http://114.115.220.129:5500/DownLoad/example.mp4";
+                img_url = $"http://114.115.220.129:5500/Resource/example.png";
+                img_download_url = $"http://114.115.220.129:5500/DownLoad/example.png";
             }
 
-            resource_score = media.resource_score; // 最低0，最高5，double
-            resource_view_count = media.resource_view_count;
-            resource_download_count = media.resource_download_count;
-            video_equipment_tag = media.video_equipment_tag;
+            resource_score = img.resource_score; // 最低0，最高5，double
+            resource_view_count = img.resource_view_count;
+            resource_download_count = img.resource_download_count;
+            img_equipment_tag = img.img_equipment_tag;
         }
     }
 }

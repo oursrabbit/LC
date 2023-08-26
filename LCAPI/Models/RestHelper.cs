@@ -177,7 +177,22 @@ namespace LCAPI.Models
         /// <summary>
         /// 模型备注，空数组表示忽略此项，List.Count == 0
         /// </summary>
-        public List<String> model_notes { get; set; } 
+        public List<String> model_notes { get; set; }
+
+        /// <summary>
+        /// 模型使用到的插件，空数组表示忽略此项
+        /// </summary>
+        public List<String> model_plugins { get; set; }
+
+        /// <summary>
+        /// 模型类型，空数组表示忽略此项
+        /// </summary>
+        public List<String> model_tag { get; set; }
+
+        /// <summary>
+        /// 装备分类，空数组表示忽略此项
+        /// </summary>
+        public List<String> model_equipment_tag { get; set; }
 
     }
 
@@ -238,5 +253,131 @@ namespace LCAPI.Models
         /// </summary>
         public List<String> ae_title { get; set; }
 
+        /// <summary>
+        /// AE使用到的插件，空数组表示忽略此项
+        /// </summary>
+        public List<String> ae_plugins { get; set; }
+
+    }
+
+    /// <summary>
+    /// 属性查找
+    /// 多个属性、多个属性值时，使用且关系进行查询
+    /// </summary>
+    public class SearchIMGJSON
+    {
+        /// <summary>
+        /// 该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+        /// 
+        /// 2023-07-19T16:00:00.000+00:00
+        /// 
+        /// 2023-07-19T16:00:00.000Z
+        /// 
+        /// 以上两个例子为UTC+0，填写时需要转换
+        /// 
+        /// 后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+        /// </summary>
+        public string resource_publish_date_start { get; set; }
+
+        /// <summary>
+        /// 该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+        /// 
+        /// 2023-07-19T16:00:00.000+00:00
+        /// 
+        /// 2023-07-19T16:00:00.000Z
+        /// 
+        /// 以上两个例子为UTC+0，填写时需要转换
+        /// 
+        /// 后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+        /// </summary>
+        public string resource_publish_date_end { get; set; }
+
+        /// <summary>
+        /// 关键字，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_keyword { get; set; }
+
+        /// <summary>
+        /// 语种，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_lang { get; set; }
+
+        /// <summary>
+        /// 领域，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_tag { get; set; }
+
+        /// <summary>
+        /// 描述，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_description { get; set; }
+
+        /// <summary>
+        /// 同时查询原始文件名和中文文件名，或关系，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_file_name { get; set; }
+
+        /// <summary>
+        /// 装备分类，空数组表示忽略此项
+        /// </summary>
+        public List<string> img_equipment_tag { get; set; }
+    }
+
+    /// <summary>
+    /// 属性查找
+    /// 多个属性、多个属性值时，使用且关系进行查询
+    /// </summary>
+    public class SearchDocJSON
+    {
+        /// <summary>
+        /// 该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+        /// 
+        /// 2023-07-19T16:00:00.000+00:00
+        /// 
+        /// 2023-07-19T16:00:00.000Z
+        /// 
+        /// 以上两个例子为UTC+0，填写时需要转换
+        /// 
+        /// 后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+        /// </summary>
+        public string resource_publish_date_start { get; set; }
+
+        /// <summary>
+        /// 该资源被上传至本系统中的时间，请使用ISO UTC+0 Date 字符串表示
+        /// 
+        /// 2023-07-19T16:00:00.000+00:00
+        /// 
+        /// 2023-07-19T16:00:00.000Z
+        /// 
+        /// 以上两个例子为UTC+0，填写时需要转换
+        /// 
+        /// 后端系统使用UTC+8保存数据，数据库中使用UTC+0保存数据
+        /// </summary>
+        public string resource_publish_date_end { get; set; }
+
+        /// <summary>
+        /// 关键字，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_keyword { get; set; }
+
+        /// <summary>
+        /// 语种，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_lang { get; set; }
+
+        /// <summary>
+        /// 领域，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_tag { get; set; }
+
+        /// <summary>
+        /// 描述，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_description { get; set; }
+
+        /// <summary>
+        /// 同时查询原始文件名和中文文件名，或关系，空数组表示忽略此项，List.Count == 0
+        /// </summary>
+        public List<String> resource_file_name { get; set; }
     }
 }

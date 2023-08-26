@@ -475,6 +475,19 @@
           }
         }
       },
+      "NLog/5.2.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -1653,6 +1666,30 @@
         "packageIcon.png"
       ]
     },
+    "NLog/5.2.3": {
+      "sha512": "rHTNRtQF5qYqLutSR9ldUWXglKym/KA1R6GKw4JtDvza8i5+kgfmeKH75Ccn1noeJIOjHLXorphMxKk3EiN2tg==",
+      "type": "package",
+      "path": "nlog/5.2.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "N.png",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/net46/NLog.dll",
+        "lib/net46/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "nlog.5.2.3.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    },
     "SharpCompress/0.30.1": {
       "sha512": "XqD4TpfyYGa7QTPzaGlMVbcecKnXy4YmYLDWrU+JIj7IuRNl7DH2END+Ll7ekWIY8o3dAMWLFDE1xdhfIWD1nw==",
       "type": "package",
@@ -2231,6 +2268,7 @@
       "MongoDB.Bson >= 2.20.0",
       "MongoDB.Driver >= 2.20.0",
       "MongoDB.Driver.Core >= 2.20.0",
+      "NLog >= 5.2.3",
       "Newtonsoft.Json >= 13.0.3",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "Swashbuckle.AspNetCore.Annotations >= 6.5.0"
@@ -2301,6 +2339,10 @@
           "MongoDB.Driver.Core": {
             "target": "Package",
             "version": "[2.20.0, )"
+          },
+          "NLog": {
+            "target": "Package",
+            "version": "[5.2.3, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

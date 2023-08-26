@@ -1,0 +1,178 @@
+2023/08/26 16:16:16.113|INFO|App set up end! |LCAPI.Program|
+2023/08/26 16:25:04.153|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:25:14.372|INFO|LCAPI.Controllers.UserInfoController.VerifyUserInfo|LCAPI.Models.UserInfoJSON |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:26:32.807|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:26:56.221|INFO|LCAPI.Controllers.UserInfoController.VerifyUserInfo|
+
+call: VerifyUserInfo
+
+userInfoJSON: {"id":"string","type":"string","username":"string","password":"string"}
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 88
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-USERINFO http-value: PXQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+error: 401 |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:31:28.130|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:31:39.904|ERROR|LCAPI.Controllers.UserInfoController.VerifyUserInfo|LCAPI.Models.UserInfoJSON |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:31:40.252|INFO|LCAPI.Controllers.UserInfoController.VerifyUserInfo|userInfoJSON: {"id":"string","type":"string","username":"string","password":"string"}
+
+error: 401 |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:33:37.286|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:33:50.266|INFO|LCAPI.Controllers.UserInfoController.VerifyUserInfo| |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:34:58.062|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:35:14.498|INFO|LCAPI.Controllers.UserInfoController.VerifyUserInfo|userInfoJSON: {"id":"string","type":"string","username":"111","password":"111"}
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 82
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-USERINFO http-value: PXQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"id":"64c62fd0456351af3bd0ec77","type":"user","username":"111","password":"111"} |LCAPI.Controllers.UserInfoController|
+2023/08/26 16:48:14.778|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 16:48:41.678|INFO|LCAPI.Controllers.ModelInfoController.InsertModelInfo|
+
+call: InsertModelInfo
+
+userInfoJSON: {"id":"string","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"string","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"string","resource_upload_user":"string","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"model_download_url":"string","model_editor_version":"string","model_has_texture":true,"model_notes":"string","model_plugins":["string"],"model_view":"string","model_equipment_tag":["string"],"model_animation_duration":0,"model_tag":["string"]}
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 926
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-MODELINFO http-value: Pxq
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"id":"64e9bc698942403cec7039bd","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"2023/8/26 8:48:40 +00:00","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"2023/8/26 8:48:40 +00:00","resource_upload_user":"000000000000000000000000","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"model_download_url":"http://114.115.220.129:5500/DownLoad/example.zip","model_editor_version":"string","model_has_texture":true,"model_notes":"string","model_plugins":["string"],"model_view":"http://114.115.220.129:5500/Resource/example.mp4","model_equipment_tag":["string"],"model_animation_duration":0,"model_tag":["string"]} |LCAPI.Controllers.ModelInfoController|
+2023/08/26 17:04:08.103|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 17:04:18.453|INFO|LCAPI.Controllers.AeInfoController.InsertAeInfo|
+
+call: InsertAeInfo
+
+userInfoJSON: {"id":"string","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"string","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"string","resource_upload_user":"string","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"string","ae_download_url":"string","ae_duration":0,"ae_plugins":["string"],"ae_title":"string","ae_url":"string","ae_version":"string"}
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 807
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-AEINFO http-value: PxQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"id":"64e9c012b8631a1c255512b6","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"2023/8/26 9:04:17 +00:00","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"2023/8/26 9:04:17 +00:00","resource_upload_user":"000000000000000000000000","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"string","ae_download_url":"http://114.115.220.129:5500/DownLoad/example.zip","ae_duration":0,"ae_plugins":["string"],"ae_title":"string","ae_url":"http://114.115.220.129:5500/Resource/example.mp4","ae_version":"string"} |LCAPI.Controllers.AeInfoController|
+2023/08/26 17:41:19.565|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 17:42:05.319|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 17:42:53.908|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/26 17:43:58.982|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|

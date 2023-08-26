@@ -1,10 +1,5 @@
 ﻿using LCAPI.Models;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
-using Swashbuckle.AspNetCore.Annotations;
-using System.Text.Json.Serialization;
-using System.Xml.Linq;
 
 namespace LCAPI.Controllers
 {
@@ -18,11 +13,12 @@ namespace LCAPI.Controllers
     [Route("/LCAPI/[controller]")]
     public class UserInfoController : ControllerBase
     {
-        private readonly ILogger<UserInfoController> _logger;
+        private readonly NLog.Logger _logger;
+        private string loggerString = "";
 
-        public UserInfoController(ILogger<UserInfoController> logger)
+        public UserInfoController(ILogger<UserInfoController> _)
         {
-            _logger = logger;
+            _logger = NLog.LogManager.GetCurrentClassLogger();
         }
 
         private bool verifyHeader()
@@ -46,15 +42,14 @@ namespace LCAPI.Controllers
         [Produces("application/json")]
         public ActionResult VerifyUserInfo(UserInfoJSON userLogin)
         {
-            var loggerString = $"\r\n\r\ncall: VerifyUserInfo\r\n\r\n" + $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(userLogin)}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(userLogin)}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
+
                 if (!verifyHeader())
                 {
                     loggerString += "error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -63,22 +58,23 @@ namespace LCAPI.Controllers
                 if (user == null)
                 {
                     loggerString += "error: 401";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("401", "用户名或密码错误", new UserInfoJSON(), 401);
                 }
                 else
                 {
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(user.ToUserInfoJSON());
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            { 
+                _logger.Info(loggerString);
             }
         }
 
@@ -94,37 +90,36 @@ namespace LCAPI.Controllers
         [Produces("application/json")]
         public ActionResult GetUserInfoById(string userid)
         {
-            var loggerString = $"\r\n\r\ncall: GetUserInfoById\r\n\r\n" + $"userInfoJSON: {userid}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"userInfoJSON: {userid}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += "error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var user = UserInfo.GetUserById(userid);
                 if (user == null)
                 {
                     loggerString += "error: 404";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new UserInfoJSON(), 404);
                 }
                 else
                 {
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(user.ToUserInfoJSON());
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
     }

@@ -81,6 +81,50 @@ namespace LCAPI
                     Example = new OpenApiString("PxQ")
                 });
             }
+            else if (controllerName == "IMGInfo")
+            {
+                operation.Parameters.Add(new OpenApiParameter
+                {
+                    Name = "LCAPI-IMGINFO",
+                    In = ParameterLocation.Header,
+                    Required = false,
+                    Description = "一个自定义个头，只针对/IMGInfo，固定值pXq",
+                    Schema = new OpenApiSchema
+                    {
+                        Type = "string"
+                    },
+                    Example = new OpenApiString("pXq")
+                });
+            }
+            else if (controllerName == "DocInfo")
+            {
+                operation.Parameters.Add(new OpenApiParameter
+                {
+                    Name = "LCAPI-DOCINFO",
+                    In = ParameterLocation.Header,
+                    Required = false,
+                    Description = "一个自定义个头，只针对/DocInfo，固定值PXq",
+                    Schema = new OpenApiSchema
+                    {
+                        Type = "string"
+                    },
+                    Example = new OpenApiString("PXq")
+                });
+            }
+        }
+    }
+
+    public class LoggerWriter : BackgroundService
+    {
+        public static Queue<String> log = new Queue<String>();
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
+        {
+            //while (true)
+            {
+                Console.WriteLine("task");
+                Thread.Sleep(1000);
+            }
+            return Task.CompletedTask;
         }
     }
 
@@ -88,6 +132,8 @@ namespace LCAPI
     {
         public static void Main(string[] args)
         {
+            NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
 
             var builder = WebApplication.CreateBuilder(args);
@@ -100,7 +146,7 @@ namespace LCAPI
 
             builder.Services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v3", new OpenApiInfo
+                options.SwaggerDoc("v4", new OpenApiInfo
                 {
                     Version = "v4",
                     Title = "LC API",
@@ -129,7 +175,7 @@ namespace LCAPI
             //{
                 app.UseSwagger();
                 app.UseSwaggerUI(c => { 
-                    c.SwaggerEndpoint("/swagger/v3/swagger.json", "LC API v3");
+                    c.SwaggerEndpoint("/swagger/v4/swagger.json", "LC API v4");
                     
                 });
             //}
@@ -139,6 +185,8 @@ namespace LCAPI
             //app.UseCors("AllowAllOrigins");
 
             app.MapControllers();
+
+            logger.Info("App set up end!");
 
             app.Run();
         }

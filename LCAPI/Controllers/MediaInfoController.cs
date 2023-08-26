@@ -26,11 +26,12 @@ namespace LCAPI.Controllers
     [Route("/LCAPI/[controller]")]
     public class MediaInfoController : ControllerBase
     {
-        private readonly ILogger<MediaInfoController> _logger;
+        private readonly NLog.Logger _logger;
+        private string loggerString = "";
 
-        public MediaInfoController(ILogger<MediaInfoController> logger)
+        public MediaInfoController(ILogger<MediaInfoController> _)
         {
-            _logger = logger;
+            _logger = NLog.LogManager.GetCurrentClassLogger();
         }
 
         private bool verifyHeader()
@@ -41,7 +42,7 @@ namespace LCAPI.Controllers
         /// <summary>
         /// 对视频资源信息进行全文查找
         /// 
-        /// 查找的范围参看FullText结构，目前包括范围：描述，文件名，关键词，领域
+        /// 查找的范围参看FullText结构，目前包括范围：描述，文件名，关键词，领域，装备分类
         /// </summary>
         /// <param name="search">如果为空字符串，表示返回所有数据</param>
         /// <param name="page">字符串：当前所处的分页页码，起始值为1</param>
@@ -54,16 +55,14 @@ namespace LCAPI.Controllers
         [Produces("application/json")]
         public ActionResult FullTextResourceSearch(FullTextSearchJSON search, int page, int page_size, string order)
         {
-            var loggerString = $"\r\n\r\ncall: FullTextResourceSearch\r\n\r\n" + $"searchJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(search)}\r\n\r\n" +
-                $"page: {page}, page_size: {page_size}, order: {order}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"searchJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(search)}\r\n\r\n" +
+                     $"page: {page}, page_size: {page_size}, order: {order}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += "error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -82,14 +81,16 @@ namespace LCAPI.Controllers
                 var returnJson = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 
                 loggerString += $"return: {returnJson}";
-                _logger.LogInformation(loggerString);
                 return new JsonResult(returnJson) { StatusCode = 200 };
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -109,16 +110,14 @@ namespace LCAPI.Controllers
         [Produces("application/json")]
         public ActionResult PropertySearch(SearchJSON search, int page, int page_size, string order)
         {
-            var loggerString = $"\r\n\r\ncall: PropertySearch\r\n\r\n" + $"searchJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(search)}\r\n\r\n" +
-    $"page: {page}, page_size: {page_size}, order: {order}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"searchJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(search)}\r\n\r\n" +
+$"page: {page}, page_size: {page_size}, order: {order}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += "error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -138,14 +137,16 @@ namespace LCAPI.Controllers
                 var returnJson = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 
                 loggerString += $"return: {returnJson}";
-                _logger.LogInformation(loggerString);
                 return new JsonResult(returnJson) { StatusCode = 200 };
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -161,15 +162,13 @@ namespace LCAPI.Controllers
         [Produces("application/json")]
         public ActionResult GetMediaInfoById(string id)
         {
-            var loggerString = $"\r\n\r\ncall: GetMediaInfoById\r\n\r\n" + $"id: {id}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"id: {id}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += "error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var media = MediaInfo.GetMediaInfoById(id);
@@ -177,7 +176,6 @@ namespace LCAPI.Controllers
                 if (media == null)
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new MediaInfoJSON(), 404);
                 }
                 else
@@ -186,15 +184,17 @@ namespace LCAPI.Controllers
 
 
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -210,15 +210,13 @@ namespace LCAPI.Controllers
         [HttpGet("Update/Score")]
         public ActionResult UpdateScoreByID(string id, double score)
         {
-            var loggerString = $"\r\n\r\ncall: UpdateScoreByID\r\n\r\n" + $"id: {id}\r\n\r\n" + $"score: {score}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"id: {id}\r\n\r\n" + $"score: {score}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var media = MediaInfo.UpdateScore(id, score);
@@ -226,7 +224,6 @@ namespace LCAPI.Controllers
                 if (media == null)
                 {
                     loggerString += $"error: 404";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new MediaInfoJSON(), 404);
                 }
                 else
@@ -234,15 +231,17 @@ namespace LCAPI.Controllers
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(new MediaInfoJSON(media));
 
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -257,15 +256,13 @@ namespace LCAPI.Controllers
         [HttpGet("Update/DownloadCount")]
         public ActionResult UpdateDownloadCountByID(string id)
         {
-            var loggerString = $"\r\n\r\ncall: DownloadCount\r\n\r\n" + $"id: {id}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
             try
             {
+                loggerString = $"id: {id}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var media = MediaInfo.UpdateDownloadCount(id);
@@ -273,7 +270,6 @@ namespace LCAPI.Controllers
                 if (media == null)
                 {
                     loggerString += $"error: 404";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new MediaInfoJSON(), 404);
                 }
                 else
@@ -281,15 +277,17 @@ namespace LCAPI.Controllers
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(new MediaInfoJSON(media));
 
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -304,16 +302,13 @@ namespace LCAPI.Controllers
         [HttpGet("Update/ViewCount")]
         public ActionResult UpdateViewCountByID(string id)
         {
-            var loggerString = $"\r\n\r\ncall: UpdateViewCountByID\r\n\r\n" + $"id: {id}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
-
             try
             {
+                loggerString = $"id: {id}\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var media = MediaInfo.UpdateViewCount(id);
@@ -321,7 +316,6 @@ namespace LCAPI.Controllers
                 if (media == null)
                 {
                     loggerString += $"error: 404";
-                    _logger.LogInformation(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new MediaInfoJSON(), 404);
                 }
                 else
@@ -329,15 +323,17 @@ namespace LCAPI.Controllers
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(new MediaInfoJSON(media));
 
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
             }
         }
 
@@ -356,7 +352,7 @@ namespace LCAPI.Controllers
         [HttpPost("Update/Media")]
         public ActionResult UpdateMediaInfo(MediaInfoJSON mediaJson)
         {
-            var loggerString = $"\r\n\r\ncall: UpdateMediaInfoByID\r\n\r\n" + $"mediaJson_new: {Newtonsoft.Json.JsonConvert.SerializeObject(mediaJson)}\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: UpdateMediaInfoByID\r\n\r\n" + $"mediaJson_new: {Newtonsoft.Json.JsonConvert.SerializeObject(mediaJson)}\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -364,7 +360,7 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 var media = MediaInfo.Update(new MediaInfo(mediaJson));
@@ -372,7 +368,7 @@ namespace LCAPI.Controllers
                 if (media == null)
                 {
                     loggerString += $"error: 404";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到", new MediaInfoJSON(), 404);
                 }
                 else
@@ -380,14 +376,14 @@ namespace LCAPI.Controllers
                     var json = Newtonsoft.Json.JsonConvert.SerializeObject(new MediaInfoJSON(media));
 
                     loggerString += $"return: {json}";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return new JsonResult(json) { StatusCode = 200 };
                 }
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
             }
         }
@@ -407,7 +403,7 @@ namespace LCAPI.Controllers
         public async Task<IActionResult> UpdateMediaDBFromExcel(IFormFile file, string userId, bool ignore_cell_error)
         {
             var newGuid = Guid.NewGuid();
-            var loggerString = $"\r\n\r\ncall: UpdateMediaInfoByID\r\n\r\n" + $"userId: {userId}\r\n\r\n" + $"guid: {newGuid.ToString()}\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: UpdateMediaInfoByID\r\n\r\n" + $"userId: {userId}\r\n\r\n" + $"guid: {newGuid.ToString()}\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -415,13 +411,13 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 if (file == null || file.Length == 0)
                 {
                     loggerString += $"error: 422";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("422", "Excel not found", "", 422);
                 }
 
@@ -442,7 +438,7 @@ namespace LCAPI.Controllers
                 else if(user == null && ignore_cell_error == false)
                 {
                     loggerString += $"error: 404 未找到上传用户信息";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("404", "未找到上传用户信息", "", 404);
                 }
 
@@ -464,13 +460,13 @@ namespace LCAPI.Controllers
                 var returnJson = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 
                 loggerString += $"return: {returnJson}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return new JsonResult(returnJson) { StatusCode = 200 };
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
             }
         }
@@ -486,7 +482,7 @@ namespace LCAPI.Controllers
         public ActionResult DeleteMediaInfoByID(string id)
         {
             var newGuid = Guid.NewGuid();
-            var loggerString = $"\r\n\r\ncall: DeleteMediaInfoByID\r\n\r\n" + $"id: {id}\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: DeleteMediaInfoByID\r\n\r\n" + $"id: {id}\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -494,7 +490,7 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
                 MediaInfo.Delete(id);
@@ -504,51 +500,7 @@ namespace LCAPI.Controllers
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
-                return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
-            }
-        }
-
-        /// <summary>
-        /// 如果服务器（华为云存储）没有该视频，返回example.mp4，使用nginx代理
-        /// 与华为云通讯使用HTTP HEAD
-        /// </summary>
-        /// <param name="id">mediainfo.id</param>
-        /// <response code="200">视频http get链接</response> 
-        /// <response code="404">视频不存在，返回example.mp4</response> 
-        /// <response code="403">LCAPI-MEDIAINFO错误</response>
-        /// <response code="500">其他未知错误</response>
-        [HttpGet("Resource/Video")]
-        [Produces(typeof(string))]
-        public async Task<IActionResult> GetVideoResource(string id)
-        {
-            var newGuid = Guid.NewGuid();
-            var loggerString = $"\r\n\r\ncall: GetVideoResource\r\n\r\n" + $"id: {id}\r\n\r\n";
-            Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
-
-            try
-            {
-                if (!verifyHeader())
-                {
-                    loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
-                    return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
-                }
-                var _httpClient = new HttpClient();
-                string url = $"http://114.115.220.129:5500/Resource/{id}.mp4";
-                var response = await _httpClient.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
-                if (response.StatusCode == HttpStatusCode.NotFound)
-                {
-                    loggerString += $"error: 404";
-                    return RestResultJSON.CreateRestJSONResult("404", "Resource Video Not Found", $"http://114.115.220.129:5500/Resource/example.mp4", 404);
-                }
-
-                return Ok(url);
-            }
-            catch (Exception ex)
-            {
-                loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
             }
         }
@@ -563,7 +515,7 @@ namespace LCAPI.Controllers
         public IActionResult GetExcelTemplate()
         {
             var newGuid = Guid.NewGuid();
-            var loggerString = $"\r\n\r\ncall: GetExcelTemplate\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: GetExcelTemplate\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -571,7 +523,7 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -582,7 +534,7 @@ namespace LCAPI.Controllers
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
             }
         }
@@ -597,7 +549,7 @@ namespace LCAPI.Controllers
         [HttpPost("Resource/GetExcelByIds")] // ASP.NET Core Web API的文件下载接口地址
         public IActionResult GetExcelByIds(List<String> ids)
         {
-            var loggerString = $"\r\n\r\ncall: GetExcelByIds\r\n\r\n" + $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(ids)}\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: GetExcelByIds\r\n\r\n" + $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(ids)}\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -605,7 +557,7 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -656,7 +608,7 @@ namespace LCAPI.Controllers
         [HttpPost("Insert/MediaInfo")]
         public ActionResult InsertMediaInfo (MediaInfoJSON mediaJson)
         {
-            var loggerString = $"\r\n\r\ncall: InsertMediaInfo\r\n\r\n" + $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(mediaJson)}\r\n\r\n";
+            loggerString = $"\r\n\r\ncall: InsertMediaInfo\r\n\r\n" + $"userInfoJSON: {Newtonsoft.Json.JsonConvert.SerializeObject(mediaJson)}\r\n\r\n";
             Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
 
             try
@@ -664,7 +616,7 @@ namespace LCAPI.Controllers
                 if (!verifyHeader())
                 {
                     loggerString += $"error: 403";
-                    _logger.LogInformation(loggerString);
+                    _logger.Info(loggerString);
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
 
@@ -675,13 +627,13 @@ namespace LCAPI.Controllers
                 var json = Newtonsoft.Json.JsonConvert.SerializeObject(new MediaInfoJSON(insertMedia));
 
                 loggerString += $"return: {json}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return new JsonResult(json) { StatusCode = 200 };
             }
             catch (Exception ex)
             {
                 loggerString += $"error: 500 {ex.Message}";
-                _logger.LogInformation(loggerString);
+                _logger.Info(loggerString);
                 return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
             }
         }

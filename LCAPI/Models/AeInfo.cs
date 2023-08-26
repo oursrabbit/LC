@@ -47,7 +47,7 @@ namespace LCAPI.Models
         public string resource_file_name { get; set; }// 原始文件名
         public string resource_file_name_zh { get; set; }// 中文文件名
         public string resource_file_extension { get; set; } // 资源文件后缀，固定.mp4
-        public double resource_file_size { get; set; }// 文件大小，MB
+        public string resource_file_size_string { get; set; }// 文件大小，MB
 
         [BsonDateTimeOptions(Kind = DateTimeKind.Local)]
         public DateTime resource_upload_date { get; set; }// 资源上传时间，Local UTC+8
@@ -65,7 +65,7 @@ namespace LCAPI.Models
         public Int64 ae_duration { get; set; } // 总秒数
         public List<string> ae_plugins { get; set; } // 使用的插件名称列表
         public string ae_title { get; set; } // 标题
-        public string ae_url { get; set; } // 预览URL
+        public string ae_view { get; set; } // 预览URL
         public string ae_version { get; set; } // 版本号
 
         public AeInfo()
@@ -81,7 +81,7 @@ namespace LCAPI.Models
             resource_file_name = "";
             resource_file_name_zh = "";
             resource_file_extension = "";
-            resource_file_size = 0;
+            resource_file_size_string = "";
             resource_upload_date = DateTime.Now; // UTC+8
             resource_upload_user = ObjectId.Empty;
             resource_upload_username = "";
@@ -94,7 +94,7 @@ namespace LCAPI.Models
             ae_duration = 0;
             ae_plugins = new();
             ae_title = "";
-            ae_url = "";
+            ae_view = "";
             ae_version = "";
 
         }
@@ -117,7 +117,7 @@ namespace LCAPI.Models
             resource_file_name = json.resource_file_name;
             resource_file_name_zh = json.resource_file_name_zh;
             resource_file_extension = json.resource_file_extension;
-            resource_file_size = json.resource_file_size;
+            resource_file_size_string = json.resource_file_size_string;
 
             var udate = DateTimeOffset.UtcNow;
             resource_upload_date = DateTimeOffset.TryParse(json.resource_upload_date, out udate) ? udate.LocalDateTime : DateTime.Now;
@@ -135,7 +135,7 @@ namespace LCAPI.Models
             ae_duration = json.ae_duration;
             ae_plugins = json.ae_plugins;
             ae_title = json.ae_title;
-            ae_url = json.ae_url;
+            ae_view = json.ae_url;
             ae_version = json.ae_version;
         }
 
@@ -211,6 +211,11 @@ namespace LCAPI.Models
             if (search.ae_title.Count > 0)
             {
                 query = query.Where(t => search.ae_title.All(d => t.ae_title.Contains(d)));
+            }
+
+            if (search.ae_plugins.Count > 0)
+            {
+                query = query.Where(t => search.ae_plugins.All(a => t.ae_plugins.Contains(a)));
             }
 
             if (search.resource_file_name.Count > 0)
@@ -353,18 +358,7 @@ namespace LCAPI.Models
                             aeInfo.resource_file_name = worksheet.Cells[rowindex, 7].Value?.ToString() ?? "";
                             aeInfo.resource_file_name_zh = aeInfo.resource_file_name;
                             aeInfo.resource_file_extension = worksheet.Cells[rowindex, 8].Value?.ToString() ?? "";
-
-                            double size = 0;
-                            var sizeRes = double.TryParse(worksheet.Cells[rowindex, 9].Value?.ToString() ?? "", out size);
-                            if (sizeRes == false && ignoreError == true)
-                            {
-                                errorString += $"row_{rowindex}_warring: resource_file_size format error\r\n\r\n";
-                            }
-                            else if (sizeRes == false && ignoreError == false)
-                            {
-                                throw new Exception("resource_file_size format error");
-                            }
-                            aeInfo.resource_file_size = size;
+                            aeInfo.resource_file_size_string = worksheet.Cells[rowindex, 9].Value?.ToString() ?? ""; ;
 
                             aeInfo.resource_upload_date = DateTime.Now;
                             aeInfo.resource_upload_user = user.Id;
@@ -402,7 +396,7 @@ namespace LCAPI.Models
                             aeInfo.ae_download_url = "";
                             aeInfo.ae_plugins = (worksheet.Cells[rowindex, 13].Value?.ToString() ?? "").Split(' ').ToList();
                             aeInfo.ae_title = worksheet.Cells[rowindex, 14].Value?.ToString() ?? "";
-                            aeInfo.ae_url = "";
+                            aeInfo.ae_view = "";
 
                             AeInfo.DBCollation.InsertOne(aeInfo);
                             newAes.Add(aeInfo);
@@ -494,9 +488,9 @@ namespace LCAPI.Models
         public string resource_file_extension { get; set; } // 资源文件后缀
 
         /// <summary>
-        /// 单位为MB，可以接受小数，double类型
+        /// 任意字符串，请标明单位。例：1KB，2.5MB，5.9GB，7TB，10PB
         /// </summary>
-        public double resource_file_size { get; set; }// 文件大小
+        public string resource_file_size_string { get; set; }// 文件大小
 
         /// <summary>
         /// 该资源被上传至本系统中的时间
@@ -586,7 +580,7 @@ namespace LCAPI.Models
             resource_file_name = "";
             resource_file_name_zh = "";
             resource_file_extension = ".mp4";
-            resource_file_size = 0;
+            resource_file_size_string = "";
             resource_upload_date = "1900-01-01T00:00:00.000+00:00";
             resource_upload_user = "";
             resource_upload_username = "";
@@ -616,7 +610,7 @@ namespace LCAPI.Models
             resource_file_name = ae.resource_file_name;
             resource_file_name_zh = ae.resource_file_name_zh;
             resource_file_extension = ae.resource_file_extension;
-            resource_file_size = ae.resource_file_size;
+            resource_file_size_string = ae.resource_file_size_string;
             resource_upload_date = new DateTimeOffset(ae.resource_upload_date.ToUniversalTime()).ToString();
             resource_upload_user = ae.resource_upload_user.ToString();
             resource_upload_username = ae.resource_upload_username;

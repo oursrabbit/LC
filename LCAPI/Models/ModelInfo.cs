@@ -60,12 +60,16 @@ namespace LCAPI.Models
 
         public Int64 resource_view_count { get; set; } // 浏览次数
 
-        public String model_download_url { get; set; } // 下载时使用该链接
         public String model_editor_version { get; set; } // 版本号 ，任意值
         public bool model_has_texture { get; set; } // 是否包含贴图
         public String model_notes { get; set; } // 备注
         public List<String> model_plugins { get; set; } // 使用的插件名称列表
-        public String model_thumbnail { get; set; } // Base64 PNG 图片
+
+        public List<string> model_equipment_tag { get; set; } // 装备分类
+
+        public Int64 model_animation_duration { get; set; } // 动画时长
+
+        public List<string> model_tag { get; set; } // 模型类型
 
 
         public ModelInfo()
@@ -89,13 +93,13 @@ namespace LCAPI.Models
             resource_download_count = 0;
             resource_view_count = 0;
 
-            model_download_url = "";
             model_editor_version = "";
             model_has_texture = false;
             model_notes = "";
             model_plugins = new();
-            model_thumbnail = "";
-
+            model_animation_duration = 0;
+            model_tag = new List<string>();
+            model_equipment_tag = new List<string>();
         }
 
         public ModelInfo(ModelInfoJSON json)
@@ -129,12 +133,13 @@ namespace LCAPI.Models
             resource_download_count = json.resource_download_count;
             resource_view_count = json.resource_view_count;
 
-            model_download_url = json.model_download_url;
             model_editor_version = json.model_editor_version;
             model_has_texture = json.model_has_texture;
             model_notes = json.model_notes;
             model_plugins = json.model_plugins;
-            model_thumbnail = json.model_thumbnail;
+            model_animation_duration = json.model_animation_duration;
+            model_tag = json.model_tag;
+            model_equipment_tag = json.model_equipment_tag;
         }
 
         public ModelInfoJSON ToModelInfoJSON()
@@ -158,7 +163,9 @@ namespace LCAPI.Models
                                     || keywords.All(kw => t.resource_keyword.Contains(kw))
                                     || keywords.All(kw => t.resource_tag.Contains(kw))
                                     || keywords.All(kw => t.model_notes.Contains(kw))
-                                    || keywords.All(kw => t.model_plugins.Contains(kw)));
+                                    || keywords.All(kw => t.model_plugins.Contains(kw))
+                                    || keywords.All(kw => t.model_tag.Contains(kw))
+                                    || keywords.All(kw => t.model_equipment_tag.Contains(kw)));
             }
 
             if (order == "asc")
@@ -214,6 +221,21 @@ namespace LCAPI.Models
             if (search.model_has_texture == 0 || search.model_has_texture == 1)
             {
                 query = query.Where(t => t.model_has_texture == (search.model_has_texture == 1));
+            }
+
+            if (search.model_plugins.Count > 0)
+            {
+                query = query.Where(t => search.model_plugins.All(d => t.model_plugins.Contains(d)));
+            }
+
+            if (search.model_tag.Count > 0)
+            {
+                query = query.Where(t => search.model_plugins.All(d => t.model_plugins.Contains(d)));
+            }
+
+            if (search.model_equipment_tag.Count > 0)
+            {
+                query = query.Where(t => search.model_equipment_tag.All(d => t.model_equipment_tag.Contains(d)));
             }
 
             if (search.resource_file_name.Count > 0)
@@ -365,12 +387,36 @@ namespace LCAPI.Models
                             modelInfo.resource_download_count = 0;
                             modelInfo.resource_view_count = 0;
 
-                            modelInfo.model_download_url = "";
                             modelInfo.model_editor_version = worksheet.Cells[rowindex, 9].Value?.ToString() ?? "";
                             modelInfo.model_has_texture = (worksheet.Cells[rowindex, 10].Value?.ToString() ?? "") == "是";
                             modelInfo.model_notes = worksheet.Cells[rowindex, 11].Value?.ToString() ?? "";
                             modelInfo.model_plugins = (worksheet.Cells[rowindex, 12].Value?.ToString() ?? "").Split(' ').ToList();
-                            modelInfo.model_thumbnail = "";
+
+                            modelInfo.model_tag = (worksheet.Cells[rowindex, 13].Value?.ToString() ?? "").Split(' ').ToList();
+                            modelInfo.model_equipment_tag = (worksheet.Cells[rowindex, 14].Value?.ToString() ?? "").Split(' ').ToList();
+
+                            var durationRes = true;
+                            var duration = worksheet.Cells[rowindex, 15].Value?.ToString() ?? "0:0:0";
+                            if (duration.Split(':').Length != 3)
+                            {
+                                duration = "0:0:0";
+                                durationRes = false;
+                            }
+                            var hour = 0;
+                            durationRes = int.TryParse(duration.Split(':')[0], out hour) == true ? durationRes : false;
+                            var minute = 0;
+                            durationRes = int.TryParse(duration.Split(":")[1], out minute) == true ? durationRes : false;
+                            var second = 0;
+                            durationRes = int.TryParse(duration.Split(":")[2], out second) == true ? durationRes : false;
+                            modelInfo.model_animation_duration = hour * 3600 + minute * 60 + second;
+                            if (durationRes == false && ignoreError == true)
+                            {
+                                errorString += $"row_{rowindex}_warring: model_animation_duration format error\r\n\r\n";
+                            }
+                            else if (durationRes == false && ignoreError == false)
+                            {
+                                throw new Exception("model_animation_duration format error");
+                            }
 
                             ModelInfo.DBCollation.InsertOne(modelInfo);
                             newModels.Add(modelInfo);
@@ -391,7 +437,7 @@ namespace LCAPI.Models
     }
 
     /// <summary>
-    /// 视频素材数据库
+    /// 模型素材数据库
     /// </summary>
     public class ModelInfoJSON
     {
@@ -462,7 +508,7 @@ namespace LCAPI.Models
         public string resource_file_extension { get; set; } // 资源文件后缀
 
         /// <summary>
-        /// 任意字符串
+        /// 任意字符串，请标明单位。例：1KB，2.5MB，5.9GB，7TB，10PB
         /// </summary>
         public String resource_file_size_string { get; set; }// 文件大小
 
@@ -532,10 +578,28 @@ namespace LCAPI.Models
         public List<String> model_plugins { get; set; } // 使用的插件名称列表
         
         /// <summary>
-        /// 模型预览图，GET URL，未找到时使用example.png
+        /// 模型预览视频，未找到时使用example.mp4
         /// </summary>
-        public String model_thumbnail { get; set; } // Base64 PNG 图片
+        public String model_view { get; set; }
 
+        /// <summary>
+        /// 装备分类
+        /// </summary>
+        public List<string> model_equipment_tag { get; set; } // 装备分类
+
+        /// <summary>
+        /// 模型动画时长，单位为秒，实际类型为Int64
+        /// </summary>
+        public Int64 model_animation_duration { get; set; } // 动画时长
+
+        /// <summary>
+        /// 模型分类
+        /// </summary>
+        public List<string> model_tag { get; set; } // 模型类型
+
+        /// <summary>
+        /// RESTful API
+        /// </summary>
         public ModelInfoJSON()
         {
             id = "";
@@ -562,9 +626,16 @@ namespace LCAPI.Models
             model_has_texture = false;
             model_notes = "";
             model_plugins = new();
-            model_thumbnail = "";
+            model_view = "";
+            model_equipment_tag = new();
+            model_tag = new();
+            model_animation_duration = 0;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
         public ModelInfoJSON(ModelInfo model)
         {
             id = model.Id.ToString();
@@ -591,12 +662,12 @@ namespace LCAPI.Models
             model_notes = model.model_notes;
             model_plugins = model.model_plugins;
 
-            model_thumbnail = $"http://114.115.220.129:5500/Resource/{id}.png";
+            model_view = $"http://114.115.220.129:5500/Resource/{id}.mp4";
             var _httpClient = new HttpClient();
-            var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, model_thumbnail));
+            var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, model_view));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                model_thumbnail = $"http://114.115.220.129:5500/Resource/example.png";
+                model_view = $"http://114.115.220.129:5500/Resource/example.mp4";
             }
 
             model_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.zip";
@@ -605,6 +676,10 @@ namespace LCAPI.Models
             {
                 model_download_url = $"http://114.115.220.129:5500/DownLoad/example.zip";
             }
+
+            model_tag = model.model_tag;
+            model_equipment_tag = model.model_equipment_tag;
+            model_animation_duration = model.model_animation_duration;
         }
     }
 }

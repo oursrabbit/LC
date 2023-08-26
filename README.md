@@ -3,9 +3,13 @@
 
 ## v4 1.0.4
 
+*MicrosoftLogger --> NLog*
+
+*NLog --> LogFile.txt*
+
 **---Update---**
 
-1. MediaInfo.resource_file_size --> MediaInfo.resource_file_size_string
+1. double MediaInfo.resource_file_size --> string MediaInfo.resource_file_size_string
 
 2. 新增MediaInfo.video_equipment_tag
 
@@ -15,7 +19,7 @@
 
 ## v3 1.0.3
 
-*增加四种新的资源*
+*增加四种资源*
 
 *Model：模型资源。DB模型类：ModelInfo，JSON类：ModelInfoJSON*
 
@@ -28,6 +32,8 @@
 **---Update---**
 
 1. 修复了一些之前没有验证Header的问题
+
+2. Excel上传后，增加了新的数据单元格验证，根据参数ignore_cell_error，决定验证发生错误时的处理方式
 
 ## v2 1.0.2
 

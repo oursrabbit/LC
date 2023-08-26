@@ -100,5 +100,45 @@ namespace LCAPI.Controllers
         public void NotWorking(AeInfoJSON notworking)
         {
         }
+
+        /// <summary>
+        /// 没用
+        /// </summary>
+        /// <param name="notworking"></param>
+        /// <returns></returns>
+        [HttpGet("NotWorking/IMGInfo")]
+        public void NotWorking(IMGInfo notworking)
+        {
+        }
+
+        /// <summary>
+        /// 没用
+        /// </summary>
+        /// <param name="notworking"></param>
+        /// <returns></returns>
+        [HttpGet("NotWorking/IMGInfoJSON")]
+        public void NotWorking(IMGInfoJSON notworking)
+        {
+        }
+
+        /// <summary>
+        /// 没用
+        /// </summary>
+        /// <param name="notworking"></param>
+        /// <returns></returns>
+        [HttpGet("NotWorking/DocInfo")]
+        public void NotWorking(DocInfo notworking)
+        {
+        }
+
+        /// <summary>
+        /// 没用
+        /// </summary>
+        /// <param name="notworking"></param>
+        /// <returns></returns>
+        [HttpGet("NotWorking/DocInfoJSON")]
+        public void NotWorking(DocInfoJSON notworking)
+        {
+        }
     }
 }
