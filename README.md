@@ -3,6 +3,8 @@
 
 ## v4 1.0.4
 
+*更换了日志框架*
+
 *MicrosoftLogger --> NLog*
 
 *NLog --> LogFile.txt*

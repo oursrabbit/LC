@@ -9,45 +9,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = LCMVC
 build_property.RootNamespace = LCMVC
-build_property.ProjectDir = C:\Users\PXQ\Desktop\LCMVC\
+build_property.ProjectDir = C:\Users\PXQ\Desktop\LC\LCMVC - old\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\PXQ\Desktop\LCMVC
+build_property.MSBuildProjectDirectory = C:\Users\PXQ\Desktop\LC\LCMVC - old
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Admin/Index.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Index/Login.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Index/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXhcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Privacy.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Shared/Error.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/User/Search.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/User/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/_ViewImports.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/_ViewStart.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/PXQ/Desktop/LCMVC/Views/Shared/_Layout.cshtml]
+[C:/Users/PXQ/Desktop/LC/LCMVC - old/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-nhatel4jan
