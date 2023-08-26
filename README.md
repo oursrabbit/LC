@@ -3,7 +3,7 @@
 
 ## v4 1.0.4
 
-** ---Update--- **
+**---Update---**
 
 1. MediaInfo.resource_file_size --> MediaInfo.resource_file_size_string
 
@@ -15,7 +15,7 @@
 
 ## v3 1.0.3
 
-* 增加四种新的资源 *
+*增加四种新的资源*
 
 * Model：模型资源。DB模型类：ModelInfo，JSON类：ModelInfoJSON *
 
