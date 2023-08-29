@@ -11,7 +11,11 @@
 
 *增加了上传程序的下载接口，Flutter for all platform*
 
-*新增 UtilitiesController，以及/Utilities/GetResourceUploader*
+*新增 UtilitiesController*
+
+*新增 /Utilities/GetResourceUploader 用来自动将文件名修改为数据库编号（flutter 3 windows)*
+
+*新增 /Utilities/GetTestDataGenerator 用来自动生成各种测试数据（.net framework 4.8)
 
 **---Update---**
 

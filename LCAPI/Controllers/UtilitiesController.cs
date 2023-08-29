@@ -53,5 +53,35 @@ namespace LCAPI.Controllers
                 _logger.Info(loggerString);
             }
         }
+
+        /// <summary>
+        /// 工具软件：生成各种随机数据
+        /// .net framework 4.8
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("GetTestDataGenerator")]
+        public ActionResult GetTestDataGenerator()
+        {
+            try
+            {
+                loggerString = $"GetTestDataGenerator\r\n\r\n";
+                Request.Headers.ToList().ForEach(t => loggerString += $"http-header: {t.Key} http-value: {t.Value}\r\n\r\n");
+                if (!verifyHeader())
+                {
+                    loggerString += "error: 403";
+                    return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
+                }
+                return Ok(@"http://114.115.220.129:5500/DownLoad/lc_datagenerator_windows.zip");
+            }
+            catch (Exception ex)
+            {
+                loggerString += $"error: 500 {ex.Message}";
+                return RestResultJSON.CreateRestJSONResult("500", "服务器错误", ex.Message, 500);
+            }
+            finally
+            {
+                _logger.Info(loggerString);
+            }
+        }
     }
 }

@@ -839,6 +839,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:LCAPI.Controllers.UtilitiesController.GetTestDataGenerator">
+            <summary>
+            工具软件：生成各种随机数据
+            .net framework 4.8
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:LCAPI.Models.AeInfoJSON">
             <summary>
             视频素材数据库

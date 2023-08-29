@@ -1,0 +1,15 @@
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\bin\Debug\LC_DataGenerator.exe.config
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\bin\Debug\LC_DataGenerator.exe
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\bin\Debug\LC_DataGenerator.pdb
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.csproj.AssemblyReference.cache
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.csproj.SuggestedBindingRedirects.cache
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.MainForm.resources
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.Properties.Resources.resources
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.csproj.GenerateResource.cache
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.csproj.CoreCompileInputs.cache
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.exe
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.pdb
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\bin\Debug\LC_DataGenerator.exe.manifest
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\bin\Debug\LC_DataGenerator.application
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.exe.manifest
+C:\Users\PXQ\Desktop\LC\LC_DataGenerator\obj\Debug\LC_DataGenerator.application

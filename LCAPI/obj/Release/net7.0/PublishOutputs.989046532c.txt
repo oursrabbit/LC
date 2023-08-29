@@ -1,3 +1,4 @@
+C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\nlog.config
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\LCAPI.exe
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\release\web.config
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
@@ -7,8 +8,10 @@ C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\release\appsettings.
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\release\LCAPI.deps.json
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\release\LCAPI.runtimeconfig.json
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\ae_data.xlsx
+C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\doc_data.xlsx
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\example.png
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\example.zip
+C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\img_data.xlsx
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\media_data.xlsx
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\model_data.xlsx
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\lc_resource\temp\out\说明.txt
@@ -32,6 +35,7 @@ C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\MongoDB.Driver.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\MongoDB.Driver.Core.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\MongoDB.Libmongocrypt.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\Newtonsoft.Json.dll
+C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\NLog.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\SharpCompress.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\Snappier.dll
 C:\Users\PXQ\Desktop\LC\LCAPI\obj\Release\net7.0\PubTmp\Out\Swashbuckle.AspNetCore.Annotations.dll

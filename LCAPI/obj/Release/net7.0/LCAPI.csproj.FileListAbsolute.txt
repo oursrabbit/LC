@@ -204,3 +204,7 @@ C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\example.png
 C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\example.zip
 C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\media_data.xlsx
 C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\model_data.xlsx
+C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\doc_data.xlsx
+C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\lc_resource\img_data.xlsx
+C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\nlog.config
+C:\Users\PXQ\Desktop\LC\LCAPI\bin\Release\net7.0\NLog.dll
