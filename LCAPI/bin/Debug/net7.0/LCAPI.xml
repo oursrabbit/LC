@@ -827,6 +827,18 @@
             <response code="404">未找到，id为空</response>
             <response code="500">其他未知错误</response>
         </member>
+        <member name="T:LCAPI.Controllers.UtilitiesController">
+            <summary>
+            工具类
+            </summary>
+        </member>
+        <member name="M:LCAPI.Controllers.UtilitiesController.GetResourceUploader">
+            <summary>
+            工具软件：将文件名，根据从网站下载的Excel，改为数据库ID编号
+            flutter 3 windows
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:LCAPI.Models.AeInfoJSON">
             <summary>
             视频素材数据库

@@ -9,6 +9,10 @@
 
 *NLog --> LogFile.txt*
 
+*增加了上传程序的下载接口，Flutter for all platform*
+
+*新增 UtilitiesController，以及/Utilities/GetResourceUploader*
+
 **---Update---**
 
 1. double MediaInfo.resource_file_size --> string MediaInfo.resource_file_size_string

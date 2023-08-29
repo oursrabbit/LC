@@ -111,6 +111,21 @@ namespace LCAPI
                     Example = new OpenApiString("PXq")
                 });
             }
+            else if (controllerName == "Utilities")
+            {
+                operation.Parameters.Add(new OpenApiParameter
+                {
+                    Name = "LCAPI-UTILITIES",
+                    In = ParameterLocation.Header,
+                    Required = false,
+                    Description = "一个自定义个头，只针对/Utilities，固定值pXQ",
+                    Schema = new OpenApiSchema
+                    {
+                        Type = "string"
+                    },
+                    Example = new OpenApiString("pXQ")
+                });
+            }
         }
     }
 

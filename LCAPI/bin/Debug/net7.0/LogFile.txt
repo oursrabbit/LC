@@ -176,3 +176,80 @@ return: {"id":"64e9c012b8631a1c255512b6","resource_type":"string","resource_lang
 2023/08/26 17:42:05.319|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
 2023/08/26 17:42:53.908|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
 2023/08/26 17:43:58.982|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/28 16:27:40.995|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/28 16:28:02.168|INFO|LCAPI.Controllers.AeInfoController.InsertAeInfo|
+
+call: InsertAeInfo
+
+userInfoJSON: {"id":"string","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"string","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"string","resource_upload_user":"string","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"string","ae_download_url":"string","ae_duration":0,"ae_plugins":["string"],"ae_title":"string","ae_url":"string","ae_version":"string"}
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 807
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-AEINFO http-value: PxQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"id":"64ec5a91af76865b2ec22649","resource_type":"string","resource_lang":["string"],"resource_keyword":["string"],"resource_tag":["string"],"resource_publish_date":"2023/8/28 8:28:01 +00:00","resource_description":"string","resource_source_uri":"string","resource_file_name":"string","resource_file_name_zh":"string","resource_file_extension":"string","resource_file_size_string":"string","resource_upload_date":"2023/8/28 8:28:01 +00:00","resource_upload_user":"000000000000000000000000","resource_upload_username":"string","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"string","ae_download_url":"http://114.115.220.129:5500/DownLoad/example.zip","ae_duration":0,"ae_plugins":["string"],"ae_title":"string","ae_url":"http://114.115.220.129:5500/Resource/example.mp4","ae_version":"string"} |LCAPI.Controllers.AeInfoController|
+2023/08/29 13:31:29.803|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/29 13:33:50.587|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/29 13:37:54.599|INFO|LCAPI.Controllers.UtilitiesController.GetResourceUploader|GetResourceUploader
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-UTILITIES http-value: pXQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+ |LCAPI.Controllers.UtilitiesController|
+2023/08/29 13:39:53.574|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/08/29 14:18:23.647|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
