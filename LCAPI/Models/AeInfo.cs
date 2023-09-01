@@ -624,19 +624,19 @@ namespace LCAPI.Models
             ae_title = ae.ae_title;
             ae_version = ae.ae_version;
 
-            ae_url = $"http://114.115.220.129:5500/Resource/{id}.mp4";
+            ae_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.mp4";
             var _httpClient = new HttpClient();
             var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, ae_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                ae_url = $"http://114.115.220.129:5500/Resource/example.mp4";
+                ae_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.mp4";
             }
 
-            ae_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.zip";
+            ae_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.zip";
             response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, ae_download_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                ae_download_url = $"http://114.115.220.129:5500/DownLoad/example.zip";
+                ae_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.zip";
             }
         }
     }

@@ -662,19 +662,19 @@ namespace LCAPI.Models
             model_notes = model.model_notes;
             model_plugins = model.model_plugins;
 
-            model_view = $"http://114.115.220.129:5500/Resource/{id}.mp4";
+            model_view = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.mp4";
             var _httpClient = new HttpClient();
             var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, model_view));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                model_view = $"http://114.115.220.129:5500/Resource/example.mp4";
+                model_view = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.mp4";
             }
 
-            model_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.zip";
+            model_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.zip";
             response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, model_download_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                model_download_url = $"http://114.115.220.129:5500/DownLoad/example.zip";
+                model_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.zip";
             }
 
             model_tag = model.model_tag;

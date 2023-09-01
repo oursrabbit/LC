@@ -41,7 +41,7 @@ namespace LCAPI.Controllers
                     loggerString += "error: 403";
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
-                return Ok(@"http://114.115.220.129:5500/DownLoad/lc_uploader_flutter_windows.zip");
+                return Ok(/*download*/@"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/lc_uploader_flutter_windows.zip");
             }
             catch (Exception ex)
             {
@@ -71,7 +71,7 @@ namespace LCAPI.Controllers
                     loggerString += "error: 403";
                     return RestResultJSON.CreateRestJSONResult("403", "Header Error", "", 403);
                 }
-                return Ok(@"http://114.115.220.129:5500/DownLoad/lc_datagenerator_windows.zip");
+                return Ok(/*download*/@"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/lc_datagenerator_windows.zip");
             }
             catch (Exception ex)
             {

@@ -1111,3 +1111,92 @@ http-header: Sec-Fetch-Mode http-value: cors
 http-header: Sec-Fetch-Dest http-value: empty
 
  |LCAPI.Controllers.UtilitiesController|
+2023/09/01 14:37:29.956|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/09/01 14:37:47.592|INFO|LCAPI.Controllers.AeInfoController.FullTextResourceSearch|
+
+call: FullTextResourceSearch
+
+searchJSON: {"searchtext":[]}
+
+page: 1, page_size: 1, order: 1
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 26
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-AEINFO http-value: PxQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"total_count":505,"page":1,"page_size":1,"aes":[{"id":"64eda02cff0801ef1b6252aa","resource_type":"AE资源","resource_lang":[""],"resource_keyword":[""],"resource_tag":["生地是"],"resource_publish_date":"2023/12/5 16:00:00 +00:00","resource_description":"时理事上因时有而个要人到而理过得同于人不可。","resource_source_uri":"和定也中行在要里些好不我就和为那自但。","resource_file_name":"amqZhfBMHyn","resource_file_name_zh":"amqZhfBMHyn","resource_file_extension":".ae","resource_file_size_string":"269.4GB","resource_upload_date":"2023/8/29 7:37:16 +00:00","resource_upload_user":"000000000000000000000000","resource_upload_username":"","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"你主 她里和","ae_download_url":"http://lcweb-bucket.oss-cn-beijing.aliyuncs.com/example.zip","ae_duration":185837,"ae_plugins":[""],"ae_title":"学得家生个自发说也于自理来就我过是开法生里他主就现了有了事会只对在和下她能小得本法","ae_url":"http://lcweb-bucket.oss-cn-beijing.aliyuncs.com64eda02cff0801ef1b6252aa.mp4","ae_version":"个我自 大上定他"}]} |LCAPI.Controllers.AeInfoController|
+2023/09/01 14:40:59.492|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/09/01 14:45:55.187|INFO|LCAPI.Program.Main|App set up end! |LCAPI.Program|
+2023/09/01 14:46:29.624|INFO|LCAPI.Controllers.AeInfoController.FullTextResourceSearch|
+
+call: FullTextResourceSearch
+
+searchJSON: {"searchtext":[]}
+
+page: 1, page_size: 1, order: 1
+
+http-header: Accept http-value: */*
+
+http-header: Connection http-value: keep-alive
+
+http-header: Host http-value: localhost:5000
+
+http-header: User-Agent http-value: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36
+
+http-header: Accept-Encoding http-value: gzip, deflate, br
+
+http-header: Accept-Language http-value: zh-CN,zh;q=0.9
+
+http-header: Content-Type http-value: application/json
+
+http-header: Origin http-value: http://localhost:5000
+
+http-header: Referer http-value: http://localhost:5000/swagger/index.html
+
+http-header: Content-Length http-value: 26
+
+http-header: sec-ch-ua http-value: "Chromium";v="116", "Not)A;Brand";v="24", "Google Chrome";v="116"
+
+http-header: LCAPI-AEINFO http-value: PxQ
+
+http-header: sec-ch-ua-mobile http-value: ?0
+
+http-header: sec-ch-ua-platform http-value: "Windows"
+
+http-header: Sec-Fetch-Site http-value: same-origin
+
+http-header: Sec-Fetch-Mode http-value: cors
+
+http-header: Sec-Fetch-Dest http-value: empty
+
+return: {"total_count":505,"page":1,"page_size":1,"aes":[{"id":"64eda02cff0801ef1b6252aa","resource_type":"AE资源","resource_lang":[""],"resource_keyword":[""],"resource_tag":["生地是"],"resource_publish_date":"2023/12/5 16:00:00 +00:00","resource_description":"时理事上因时有而个要人到而理过得同于人不可。","resource_source_uri":"和定也中行在要里些好不我就和为那自但。","resource_file_name":"amqZhfBMHyn","resource_file_name_zh":"amqZhfBMHyn","resource_file_extension":".ae","resource_file_size_string":"269.4GB","resource_upload_date":"2023/8/29 7:37:16 +00:00","resource_upload_user":"000000000000000000000000","resource_upload_username":"","resource_score":0.0,"resource_download_count":0,"resource_view_count":0,"ae_clarity":"你主 她里和","ae_download_url":"http://lcweb-bucket.oss-cn-beijing.aliyuncs.com/example.zip","ae_duration":185837,"ae_plugins":[""],"ae_title":"学得家生个自发说也于自理来就我过是开法生里他主就现了有了事会只对在和下她能小得本法","ae_url":"http://lcweb-bucket.oss-cn-beijing.aliyuncs.com/example.mp4","ae_version":"个我自 大上定他"}]} |LCAPI.Controllers.AeInfoController|

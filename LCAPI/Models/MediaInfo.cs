@@ -584,15 +584,15 @@ namespace LCAPI.Models
             video_clarity = media.video_clarity;
             video_duration = media.video_duration; ; // 实际为Int64
 
-            video_url = $"http://114.115.220.129:5500/Resource/{id}.mp4";
-            video_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.mp4";
+            video_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.mp4";
+            video_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.mp4";
 
             var _httpClient = new HttpClient();
             var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, video_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                video_url = $"http://114.115.220.129:5500/Resource/example.mp4";
-                video_download_url = $"http://114.115.220.129:5500/DownLoad/example.mp4";
+                video_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.mp4";
+                video_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.mp4";
             }
 
             resource_score = media.resource_score; // 最低0，最高5，double

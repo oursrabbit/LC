@@ -520,15 +520,15 @@ namespace LCAPI.Models
             resource_upload_user = doc.resource_upload_user.ToString();
             resource_upload_username = doc.resource_upload_username;
 
-            doc_url = $"http://114.115.220.129:5500/Resource/{id}.txt";
-            doc_download_url = $"http://114.115.220.129:5500/DownLoad/{id}.txt";
+            doc_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.txt";
+            doc_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/{id}.txt";
 
             var _httpClient = new HttpClient();
             var response = _httpClient.Send(new HttpRequestMessage(HttpMethod.Head, doc_url));
             if (response.StatusCode == HttpStatusCode.NotFound)
             {
-                doc_url = $"http://114.115.220.129:5500/Resource/example.txt";
-                doc_download_url = $"http://114.115.220.129:5500/DownLoad/example.txt";
+                doc_url = /*resource*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.txt";
+                doc_download_url = /*download*/$"https://yxcqsource.oss-cn-beijing.aliyuncs.com/temp/example.txt";
             }
 
             resource_score = doc.resource_score; // 最低0，最高5，double
